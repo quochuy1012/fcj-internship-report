@@ -5,27 +5,49 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# [AWS Security] Solving the Edge Case: Combating SMS OTP Fraud with Vonage Network API and Amazon Cognito
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Today I want to share notes on reducing SMS OTP fraud with **Vonage Network API** and **Amazon Cognito**.
 
-Key points to know:
+SMS OTP has long been the backbone of many 2FA flows because it is convenient. Behind that convenience sit two operational pains: **SMS Toll Fraud / AIT** and **SIM Swap** attacks. Attackers can spam OTP traffic to inflate billing, or take over a phone number to bypass authentication.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+Here are the practical points from an AWS + Vonage architecture that tries to address the problem at the root.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+## 1. Why IP blocking / rate limiting alone is not enough
 
-...Image...
+When OTP spam starts, the first reflex is often Rate Limit or IP blocking on **AWS WAF**. Modern botnets use many “clean” IPs and mimic real-user behavior.
 
-...Link...
+What is missing is not only web-edge control, but carrier-side signal: **is this phone number safe before we send OTP?**
 
-...Guide...
+## 2. Foundation: Network APIs
+
+The solution integrates CAMARA-standard Network APIs (Vonage / Ericsson) into the AWS auth flow. Two APIs stand out:
+
+- **SIM Swap API:** silently checks with the mobile operator whether the SIM was recently swapped (often within 24–72 hours).
+- **Number Verification API:** verifies whether the SIM currently using mobile data matches the claimed phone number — silent authentication with less friction than manual OTP entry.
+
+## 3. Architecture: Amazon Cognito + Vonage
+
+Vonage checks are injected into the **Amazon Cognito** flow through **Lambda Triggers**.
+
+![Risk-Adaptive Customer Sign-In architecture](/images/3-BlogsPosted/blog1.png)
+
+> Source: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2198070834291210/)
+
+### Flow (Layers 1 → 6)
+
+1. **User & Edge:** Requests from Web/iOS/Android pass **CloudFront + AWS WAF** (rate limit, bot blocking, DDoS).
+2. **Front door:** Clean traffic reaches **API Gateway + Auth Service (BFF)** to orchestrate sign-in.
+3. **Identity + Risk:** **Amazon Cognito + Risk Engine** scores risk as LOW / MEDIUM / HIGH.
+4. **Verification:**
+   - Prefer **Passkey / FIDO2** when the device supports it.
+   - Or call Vonage (**Identity Insights**, **Verify API**, **Fraud Defender**) plus carrier signals (SIM-swap, Silent Auth, SMS/Voice).
+
+## 4. Takeaways
+
+- **Proactive defense:** stop abuse early in the auth path instead of waiting for SMS billing spikes.
+- **Better UX:** Number Verification can reduce drop-off during sign-up/sign-in.
+- **Telecom-grade zero trust:** do not fully trust the client or displayed phone number; validate with the carrier too.
+
+This is a useful reference when a CIAM system needs both stronger security and smoother authentication UX.

@@ -1,126 +1,82 @@
 ---
-title: "Event 1"
+title: "FCAJ Community Day"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+<div class="event-page">
+<p class="event-eyebrow">Event report</p>
+<p class="event-lead">Report after Community Day at Bitexco — learning AWS/AI and connecting with the FCAJ community.</p>
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+<figure class="event-poster"><img src="/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
 
-### Event Objectives
+<div class="event-info-grid">
+<div><span>When</span><strong>09:00 – 12:00 (GMT+7)<br>Saturday, 23/05/2026</strong></div>
+<div><span>Where</span><strong>Bitexco Financial Tower<br>Ho Chi Minh City</strong></div>
+<div><span>Role</span><strong>Attendee</strong></div>
+<div><span>Materials</span><strong><a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a></strong></div>
+</div>
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+<h3>Event objectives</h3>
+<ul>
+<li>Connect with the FCAJ / AWS Study Group community.</li>
+<li>Share practical AWS, AI/LLM, and product-building knowledge.</li>
+<li>Learn from community talks and demos.</li>
+</ul>
 
-### Speakers
+<h3>Talks</h3>
+<div class="talk-list">
+<div class="talk-item"><span>01</span><div><strong>Anh Tịnh</strong><p>Build second brain</p></div></div>
+<div class="talk-item"><span>02</span><div><strong>Hải Anh</strong><p>Friendly AI Assistant with Amazon Q</p></div></div>
+<div class="talk-item"><span>03</span><div><strong>Thịnh</strong><p>From Edge To Origin: CloudFront as Your Foundation</p></div></div>
+<div class="talk-item"><span>04</span><div><strong>Team VIB</strong><p>36 hrs with LotusHacks – Building UTMorpho from Idea to Reality</p></div></div>
+<div class="talk-item"><span>05</span><div><strong>Đào Đức</strong><p>Deep dive talk: How LLM actually works?</p></div></div>
+<div class="talk-item"><span>06</span><div><strong>Cát Vy</strong><p>Enterprise-Grade Multi-Agent System: The Case of Startup Credit Scoring</p></div></div>
+</div>
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+<h3>Key highlights</h3>
+<h4>CloudFront &amp; edge delivery</h4>
+<ul>
+<li>CloudFront as a foundation from edge to origin.</li>
+<li>Linked to SportWear frontend: S3 + CloudFront for lower latency and origin load.</li>
+</ul>
+<h4>AI Assistant &amp; Amazon Q</h4>
+<ul>
+<li>Building friendlier AI assistants.</li>
+<li>Ideas for AI-supported product experience.</li>
+</ul>
+<h4>LLM &amp; Multi-Agent</h4>
+<ul>
+<li>Understand LLM basics before product integration.</li>
+<li>Multi-agent credit-scoring case: agent design and decision quality.</li>
+</ul>
+<h4>Hackathon → product</h4>
+<ul>
+<li>Team VIB: 36-hour LotusHacks journey building UTMorpho.</li>
+<li>Lessons on fast prototyping, teamwork, and prioritization.</li>
+</ul>
+<h4>Second brain</h4>
+<ul>
+<li>Personal knowledge systems for AWS learning and internship notes.</li>
+</ul>
 
-### Key Highlights
+<h3>Takeaways</h3>
+<ul>
+<li>CloudFront can be a core delivery layer, not just an add-on CDN.</li>
+<li>Understand LLM principles before embedding AI.</li>
+<li>Fast product building needs clear scope and teamwork.</li>
+<li>The FCAJ community is a practical learning source beyond personal labs.</li>
+</ul>
 
-#### Identifying the drawbacks of legacy application architecture
+<h3>Applying to internship</h3>
+<ul>
+<li>Use CloudFront + S3 for the SportWear frontend.</li>
+<li>Keep worklog/proposal notes structured like a “second brain”.</li>
+<li>Review talks via <a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a>.</li>
+</ul>
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
-
-#### Transitioning to modern application architecture – Microservices
-
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
-
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+<h3>Personal experience</h3>
+<p>Attending <strong>FCAJ Community Day</strong> at Bitexco was both technical and community-focused — CloudFront, AI assistants, LLMs, multi-agent systems, and hackathon stories, well timed with my AWS learning and e-commerce architecture work.</p>
+</div>

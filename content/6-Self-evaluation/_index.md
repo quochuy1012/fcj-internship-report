@@ -6,34 +6,36 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+My internship was at **Amazon Web Services Viet Nam**, in the **Workforce Bootcamp – First Cloud AI Journey** program (15/05/2026 – 31/07/2026). Before this, most of my learning was classroom theory. In the program I finally worked with cloud day by day — labs, architecture edits, and documentation.
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+The main project was **SportWear E-Commerce**, a sportswear store on AWS. I moved from IAM, EC2, S3, and CloudFront into VPC, ECS Fargate, ALB, WAF, Secrets Manager, DocumentDB, and CloudWatch. At the same time I kept a worklog, wrote the proposal, and joined **FCAJ Community Day**. Some weeks went smoothly; other weeks I had to redraw the diagram after mentor comments about high-level design, Multi-AZ, or VPC endpoints.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+Here is how I rate myself for this report:
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+| No. | Criteria | Description | Good | Fair | Average |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Professional knowledge & skills** | Understanding of AWS cloud, applying it to SportWear, using Console/CLI, work quality | ☐ | ✅ | ☐ |
+| 2 | **Ability to learn** | Absorbing new AWS services, learning from workshops, events, and docs | ☐ | ✅ | ☐ |
+| 3 | **Proactiveness** | Taking initiative on worklog/proposal/architecture without waiting | ✅ | ☐ | ☐ |
+| 4 | **Sense of responsibility** | Completing tasks on time and keeping report quality | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Following schedules, program rules, and work processes | ☐ | ✅ | ☐ |
+| 6 | **Progressive mindset** | Willingness to receive mentor feedback and improve the design | ✅ | ☐ | ☐ |
+| 7 | **Communication** | Presenting ideas and writing documentation clearly | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | Working with the FCAJ community, joining events, exchanging ideas | ✅ | ☐ | ☐ |
+| 9 | **Professional conduct** | Respecting mentors, peers, and the learning environment | ✅ | ☐ | ☐ |
+| 10 | **Problem-solving skills** | Identifying architecture/deployment issues and proposing solutions | ☐ | ✅ | ☐ |
+| 11 | **Contribution to project/team** | Completing the SportWear project and internship report package | ☐ | ✅ | ☐ |
+| 12 | **Overall** | General evaluation of the entire internship period | ✅ | ☐ | ☐ |
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+### Strengths
 
-### Needs Improvement
+* I usually rewrite the worklog or proposal soon after finishing a lab or getting feedback, instead of leaving it for later.
+* When mentors said the diagram was too messy or missing Multi-AZ / VPC endpoints, I revised it instead of defending the old version.
+* At Community Day and in the FCAJ group I asked questions and took notes on parts that related to my own project.
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+### Needs improvement
+
+* My AWS knowledge is still closer to “I can finish the lab” than “I debug new ECS / networking / WAF issues quickly.”
+* Reading English docs is still slow, and when I explain architecture I sometimes talk in circles.
+* When labs, events, and reporting pile into the same week, my schedule slips — I need to break work into clearer chunks.
+* Project contribution is still more about finishing the report package than optimizing operations (cost, cleanup, deeper monitoring).

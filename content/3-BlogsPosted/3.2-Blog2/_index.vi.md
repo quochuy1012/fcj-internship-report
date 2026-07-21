@@ -1,31 +1,46 @@
 ---
 title: "Blog 2"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# Đơn giản hóa truy cập dữ liệu doanh nghiệp với AWS Transfer Family Web Apps và Terraform
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Trong nhiều doanh nghiệp, dữ liệu quan trọng thường nằm trên **Amazon S3**. Vấn đề thực tế là không phải ai cũng dùng được AWS Console, CLI hay tool kỹ thuật để lấy file.
 
-Các điểm chính cần nắm:
+Làm sao để nhân viên upload/download trên S3 một cách đơn giản, an toàn và dễ quản trị?
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Một hướng phù hợp là: **AWS Transfer Family Web Apps** kết hợp **IAM Identity Center**, **Amazon S3 Access Grants**, **Amazon S3**, **AWS CloudTrail** và **Terraform**. Transfer Family Web Apps cung cấp cổng web để user đã xác thực duyệt, tải lên và tải xuống dữ liệu S3 mà không cần vào Console hay tự dựng portal phức tạp.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+## Kiến trúc tổng quan
 
-...Hình ảnh...
+![Kiến trúc AWS Transfer Family Web Apps](/images/3-BlogsPosted/blog2.png)
 
-...Link...
+> Nguồn bài: [AWS Study Group — Facebook](https://www.facebook.com/photo/?fbid=1533670831545926)
 
-...Hướng dẫn...
+Luồng chính gồm 5 bước:
+
+1. **End User xác thực với IAM Identity Center** — có thể tích hợp External IdP (Azure AD, Okta, SAML…).
+2. **Sau khi đăng nhập, user vào Transfer Family Web Apps** — giao diện web thân thiện, thao tác file như portal nội bộ.
+3. **Transfer Family Web Apps lấy quyền từ S3 Access Grants** — phân quyền chi tiết theo user/group thay vì cấp quyền quá rộng.
+4. **User upload/download object trên Amazon S3** — theo đúng quyền đã được cấp.
+5. **CloudTrail ghi log hoạt động** — phục vụ audit, compliance và điều tra sự cố.
+
+## Vai trò của Terraform
+
+Terraform giúp triển khai hạ tầng theo hướng Infrastructure as Code: đóng gói Identity Center, S3, Access Grants, CloudTrail và Transfer Family Web Apps thành deployment lặp lại được cho Dev/Staging/Prod hoặc nhiều phòng ban.
+
+## Giá trị bảo mật và vận hành
+
+- User không cần vào AWS Console
+- Không phải tự xây custom portal từ đầu
+- Phân quyền theo user/group rõ ràng
+- Có audit log
+- Tích hợp hệ thống định danh sẵn có
+- Triển khai lặp lại bằng Terraform
+
+## Kết luận
+
+Transfer Family Web Apps giúp biến S3 thành cổng truy cập dữ liệu thân thiện hơn cho người dùng doanh nghiệp. Kết hợp Identity Center, Access Grants, CloudTrail và Terraform thì giải pháp vừa đơn giản phía user, vừa kiểm soát được phía IT.

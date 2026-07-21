@@ -5,40 +5,40 @@ weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+<div class="home-hero">
+  <p class="home-eyebrow">AWS Workforce Bootcamp</p>
+  <h1>Internship Report</h1>
+  <p class="home-lead">First Cloud AI Journey — personal internship documentation and learning journey.</p>
+</div>
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+<div class="student-card">
+  <div class="student-photo">
+    <img src="images/cv.jpg" alt="Nguyen Pham Quoc Huy">
+  </div>
+  <div class="student-info">
+    <h2>Student Information</h2>
+    <dl class="info-list">
+      <div><dt>Full Name</dt><dd>Nguyen Pham Quoc Huy</dd></div>
+      <div><dt>Phone</dt><dd>0937534572</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:nguyenphamquochuy1012@gmail.com">nguyenphamquochuy1012@gmail.com</a></dd></div>
+      <div><dt>University</dt><dd>Ho Chi Minh City University of Technology (HUTECH)</dd></div>
+      <div><dt>Major</dt><dd>Information Technology</dd></div>
+      <div><dt>Class</dt><dd>22DTHG1</dd></div>
+      <div><dt>Company</dt><dd>Amazon Web Services Viet Nam Company Limited</dd></div>
+      <div><dt>Position</dt><dd>Workforce Bootcamp - First Cloud AI Journey</dd></div>
+      <div><dt>Duration</dt><dd>15/05/2026 – 31/07/2026</dd></div>
+    </dl>
+  </div>
+</div>
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+## Report Content
 
-&emsp; **Phone Number:** 0989888999 
-
-&emsp; **Email:** Anguyenvan@gmail.com
-
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
-
-&emsp; **Major:** Information Technology
-
-&emsp; **Class:** AWS082025
-
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
-
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
-
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
-
-![Your profile picture](/images/avatar.png)
-
-### Report Content
-
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+<div class="report-nav">
+  <a class="report-link" href="1-Worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Worklog</span></a>
+  <a class="report-link" href="2-Proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Proposal</span></a>
+  <a class="report-link" href="3-BlogsPosted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Blogs Posted</span></a>
+  <a class="report-link" href="4-EventParticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Events Participated</span></a>
+  <a class="report-link" href="5-Workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
+  <a class="report-link" href="6-Self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Self-evaluation</span></a>
+  <a class="report-link" href="7-Feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Sharing and Feedback</span></a>
+</div>

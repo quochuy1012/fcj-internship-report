@@ -5,111 +5,123 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# SportWear E-Commerce Platform
+## Sportswear e-commerce website deployed on AWS
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+
+**SportWear** is a sportswear e-commerce website that lets users browse products, add items to the cart, place orders, and upload product images.
+
+The platform is deployed on AWS with a clear separation between **frontend** (S3 + CloudFront) and **backend** (ECS Fargate behind an Application Load Balancer). Users resolve the domain with **Route 53**. **AWS WAF** is associated with the **CloudFront** distribution for basic web protection, while CloudFront accelerates and caches the frontend. Sensitive configuration is stored in **Secrets Manager**. Docker images are stored in **Amazon ECR**. The database uses a managed service (**Amazon DocumentDB**, MongoDB-compatible). Supporting services are reached privately via **VPC endpoints** (Interface/PrivateLink for ECR, Secrets Manager, CloudWatch; Gateway endpoint for S3).
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+**Problem**
+- Small sportswear shops often lack a scalable online store for catalog, cart, checkout, and image management.
+- Hosting everything on a single public server is hard to secure, scale, and monitor.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+**Solution**
+- Build SportWear as a cloud-native e-commerce site on AWS.
+- Static frontend on **S3** distributed by **CloudFront**.
+- Dynamic APIs on **ECS Fargate** in **private subnets**, fronted by **ALB**.
+- Managed database with **DocumentDB**.
+- High availability with **2 Availability Zones**, each having **Public** and **Private** subnets.
+- Private service access via **VPC endpoints** (PrivateLink for ECR / Secrets Manager / CloudWatch; Gateway for S3).
+
+**Benefits**
+- Faster page loads via CDN.
+- Better security: backend has no public IP.
+- Easier operations with managed DB, Secrets Manager, and CloudWatch.
+- Architecture aligned with mentor feedback (high-level design, Multi-AZ, VPC endpoints, managed database).
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+#### Request flow
+1. Users resolve the domain with **Amazon Route 53**.
+2. **Amazon CloudFront** (with **AWS WAF** web ACL attached) serves the frontend from the **S3 Frontend Bucket**.
+3. Dynamic actions (products, cart, orders, image upload) go from CloudFront to the **Application Load Balancer**.
+4. ALB forwards traffic to **ECS Fargate** tasks in **Private Subnets**.
+5. Backend APIs handle: **product**, **cart**, **order**, **user**, and **upload image**.
+6. DocumentDB, secrets, and images are reached from private subnets; metrics/logs go to **CloudWatch**.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+#### High-level architecture (mentor-aligned)
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+![SportWear High-Level Architecture](/images/2-Proposal/sportwear_architecture.png)
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+**Design notes (high-level)**
+- Diagram focuses on major components (no detailed Security Group / OAC boxes).
+- **2 AZs**, each with **Public Subnet** + **Private Subnet**.
+- **VPC endpoints**: Interface/PrivateLink for **Secrets Manager**, **CloudWatch**, **ECR**; Gateway endpoint for **S3**.
+- Database: **Amazon DocumentDB** (managed, MongoDB-compatible). Alternative option: **Amazon DynamoDB**.
+
+#### AWS services used
+| Layer | Service | Role |
+| --- | --- | --- |
+| DNS | Amazon Route 53 | Domain routing |
+| Security edge | AWS WAF | Web request filtering |
+| CDN | Amazon CloudFront | Cache & distribute frontend |
+| Frontend storage | Amazon S3 | Static website assets |
+| Load balancing | Application Load Balancer | Distribute API traffic |
+| Compute | Amazon ECS Fargate | Run backend containers |
+| Container registry | Amazon ECR | Store Docker images |
+| Secrets | AWS Secrets Manager | DB URL, JWT secret, API keys |
+| Observability | Amazon CloudWatch | Logs & metrics |
+| Private access | VPC endpoints | PrivateLink (ECR, Secrets Manager, CloudWatch) + S3 Gateway |
+| Database | Amazon DocumentDB | Managed MongoDB-compatible database |
+| Networking | VPC (2 AZ) | Public + Private subnets for HA |
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+**Phases**
+1. Foundation: IAM, VPC, EC2/S3 basics, CLI, monitoring.
+2. Architecture design: SportWear high-level design, service selection, Multi-AZ VPC.
+3. Deploy frontend: S3 + CloudFront.
+4. Deploy backend: Docker → ECR → ECS Fargate + ALB.
+5. Secure & operate: WAF, Secrets Manager, CloudWatch, DB connectivity, API tests.
+6. Optimize: mentor feedback, Multi-AZ, VPC endpoints, HA checklist & docs.
+
+**Core APIs**
+- Product, Cart, Order, User, Upload image
 
 ### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+
+| Period | Focus |
+| --- | --- |
+| Weeks 1–6 | AWS fundamentals (Console, EC2, S3, CloudFront, CloudWatch, CLI) |
+| Week 7 | SportWear requirements & high-level architecture |
+| Week 8 | Frontend (S3/CloudFront) + Backend (ECS/ECR/ALB) |
+| Week 9 | WAF, Secrets Manager, CloudWatch, DB & API testing |
+| Week 10 | Multi-AZ & VPC endpoint optimization |
+| Week 11 | Production-style architecture, e-commerce tests, docs & finalize report (24/07 – 31/07) |
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+Target: keep lab spend low — use **Free Tier / student credits** for eligible services, and watch paid services carefully (especially DocumentDB).
 
-Total: $0.7/month, $8.40/12 months
+Main cost drivers to watch:
+- CloudFront data transfer
+- ECS Fargate task hours
+- DocumentDB instance hours (usually outside Free Tier)
+- S3 storage & requests
+- ALB hours
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+Use [AWS Pricing Calculator](https://calculator.aws/) before scaling up and enable billing alerts.
 
 ### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
-
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+| Risk | Impact | Mitigation |
+| --- | --- | --- |
+| Unexpected AWS cost | Medium | Prefer Free Tier where possible, billing alarms, cleanup unused resources |
+| AZ / service outage | Medium | Multi-AZ VPC + ALB across AZs |
+| Secret leakage | High | Secrets Manager + least-privilege IAM |
+| API / DB failure | Medium | CloudWatch logs/metrics + health checks |
+| Architecture review changes | Low | Keep high-level diagram; iterate from mentor feedback |
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+
+- A working SportWear website on AWS: browse, cart, order, image upload.
+- Clear high-level architecture with Multi-AZ and VPC endpoints.
+- Backend isolated in private subnets; frontend accelerated by CloudFront.
+- Managed database (DocumentDB) and centralized secrets/monitoring.
+- Internship report artifacts: proposal, worklog, workshop documentation.

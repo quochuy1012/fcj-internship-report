@@ -5,40 +5,38 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Tôi viết phần này theo đúng những gì trải qua trong **First Cloud AI Journey** tại **AWS Viet Nam**, không nhằm khen hết mọi thứ mà để team FCAJ thấy chỗ nào ổn và chỗ nào còn khó với sinh viên như tôi.
 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Không gian học khá thoải mái: hỏi trong group thường có người trả lời, tài liệu cũng đủ để bắt đầu. Điểm hơi thiếu là thời gian “chỉ ngồi chat kỹ thuật” nhiều, còn buổi để quen nhau hơn thì ít — nếu có thêm 1–2 buổi ngắn kiểu networking thì sẽ dễ hỏi bài hơn.
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Mentor không đưa đáp án ngay; thường bảo tôi thử rồi mới gợi ý. Lần review SportWear, góp ý về diagram high-level, Multi-AZ và VPC endpoint giúp tôi hiểu vì sao bản đầu còn “lab-like”. Admin hỗ trợ lịch và giấy tờ ổn, không phải chờ lâu.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+**3. Sự phù hợp với chuyên ngành**  
+Tôi học CNTT ở HUTECH nên phần mạng, hệ thống vẫn dùng được. Cái mới thật sự là cloud: trước đây nghe tên dịch vụ nhiều, kỳ này mới gắn chúng vào một website bán hàng cụ thể.
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+**4. Cơ hội học hỏi**  
+Học nhiều nhất từ việc làm lại kiến trúc sau feedback, viết proposal và nghe talk ở Community Day. Skill mềm thì thấy rõ nhất ở chỗ phải giải thích được tôi đang làm gì, không chỉ click Console cho xong.
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+**5. Văn hóa & đồng đội**  
+Mọi người chia sẻ khá thẳng, ít “giữ bài”. Tôi thấy dễ hỏi hơn so với kiểu tự học một mình trên YouTube. Community Day cũng giúp hình dung cloud không chỉ là lab trên máy cá nhân.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+**6. Chính sách / phúc lợi**  
+Lộ trình (worklog → proposal → event → báo cáo) rõ nên biết tuần nào nên làm gì. Linh hoạt thời gian khi dồn deadline tài liệu là điểm tôi dùng khá nhiều.
 
+### Câu hỏi khác
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
-
+- **Hài lòng nhất:** Lúc proposal SportWear được chỉnh đúng hướng sau feedback mentor — cảm giác dự án bắt đầu “ra kiến trúc” chứ không còn là đống dịch vụ rời.
+- **Nên cải thiện:** Review kiến trúc sớm hơn một chút; và có thêm buổi ngắn về lỗi hay gặp khi lên ECS / networking, vì phần này tốn thời gian debug nhất.
+- **Có giới thiệu bạn bè không?** Có, nếu bạn đó chịu ngồi lab và viết tài liệu. Chương trình không “nhẹ”, nhưng học được thứ dùng được.
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+
+- Cho checklist kiến trúc HA ngay từ giai đoạn proposal đầu (Multi-AZ, VPC endpoint, monitoring, cleanup), để đỡ sửa lớn về sau.
+- Thêm peer review ngắn giữa các bạn cùng kỳ — nhìn diagram người khác cũng học được nhiều.
+- Tôi muốn tiếp tục theo hướng vận hành và tối ưu chi phí sau bootcamp này.
+- Cảm ơn mentor và team FCAJ đã kèm trong kỳ thực tập.

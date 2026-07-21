@@ -5,36 +5,40 @@ weight: 1
 chapter: false
 ---
 
-# Báo cáo thực tập
-### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+<div class="home-hero">
+  <p class="home-eyebrow">AWS Workforce Bootcamp</p>
+  <h1>Báo cáo thực tập</h1>
+  <p class="home-lead">First Cloud AI Journey — nhật ký và tài liệu thực tập cá nhân.</p>
+</div>
 
-&emsp; **Số điện thoại:** 0989888999
+<div class="student-card">
+  <div class="student-photo">
+    <img src="../images/cv.jpg" alt="Nguyễn Phạm Quốc Huy">
+  </div>
+  <div class="student-info">
+    <h2>Thông tin sinh viên</h2>
+    <dl class="info-list">
+      <div><dt>Họ và tên</dt><dd>Nguyễn Phạm Quốc Huy</dd></div>
+      <div><dt>Số điện thoại</dt><dd>0937534572</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:nguyenphamquochuy1012@gmail.com">nguyenphamquochuy1012@gmail.com</a></dd></div>
+      <div><dt>Trường</dt><dd>Trường Đại Học Công Nghệ TP.HCM</dd></div>
+      <div><dt>Ngành</dt><dd>Công nghệ thông tin</dd></div>
+      <div><dt>Lớp</dt><dd>22DTHG1</dd></div>
+      <div><dt>Công ty</dt><dd>Công ty TNHH Amazon Web Services Viet Nam</dd></div>
+      <div><dt>Vị trí</dt><dd>Workforce Bootcamp - First Cloud AI Journey</dd></div>
+      <div><dt>Thời gian</dt><dd>15/05/2026 – 31/07/2026</dd></div>
+    </dl>
+  </div>
+</div>
 
-&emsp; **Email:** Anguyenvan@gmail.com
+## Nội dung báo cáo
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
-
-&emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Lớp:** AWS082025
-
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
-
-&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
-
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
-
-![Ảnh đại diện của bạn](/images/avatar.png)
-
-
-
-### Nội dung báo cáo
-
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã đăng](3-BlogsPosted/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+<div class="report-nav">
+  <a class="report-link" href="1-Worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Nhật ký công việc</span></a>
+  <a class="report-link" href="2-Proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Bản đề xuất</span></a>
+  <a class="report-link" href="3-BlogsPosted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các bài blogs đã đăng</span></a>
+  <a class="report-link" href="4-EventParticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các events đã tham gia</span></a>
+  <a class="report-link" href="5-Workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
+  <a class="report-link" href="6-Self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Tự đánh giá</span></a>
+  <a class="report-link" href="7-Feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Chia sẻ, đóng góp ý kiến</span></a>
+</div>

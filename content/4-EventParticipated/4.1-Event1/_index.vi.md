@@ -1,125 +1,82 @@
 ---
-title: "Event 1"
+title: "FCAJ Community Day"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+<div class="event-page">
+<p class="event-eyebrow">Báo cáo sự kiện</p>
+<p class="event-lead">Bài thu hoạch sau buổi Community Day tại Bitexco — học AWS/AI và kết nối cộng đồng FCAJ.</p>
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+<figure class="event-poster"><img src="/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
 
-### Mục Đích Của Sự Kiện
+<div class="event-info-grid">
+<div><span>Thời gian</span><strong>09:00 – 12:00 (GMT+7)<br>Thứ Bảy, 23/05/2026</strong></div>
+<div><span>Địa điểm</span><strong>Bitexco Financial Tower<br>TP. Hồ Chí Minh</strong></div>
+<div><span>Vai trò</span><strong>Người tham dự</strong></div>
+<div><span>Tài liệu</span><strong><a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a></strong></div>
+</div>
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+<h3>Mục đích sự kiện</h3>
+<ul>
+<li>Kết nối cộng đồng FCAJ / AWS Study Group.</li>
+<li>Chia sẻ kiến thức thực tế về AWS, AI/LLM và xây sản phẩm.</li>
+<li>Học hỏi từ các phần trình bày trong cộng đồng.</li>
+</ul>
 
-### Danh Sách Diễn Giả
+<h3>Các phần trình bày</h3>
+<div class="talk-list">
+<div class="talk-item"><span>01</span><div><strong>Anh Tịnh</strong><p>Build second brain</p></div></div>
+<div class="talk-item"><span>02</span><div><strong>Hải Anh</strong><p>Friendly AI Assistant with Amazon Q</p></div></div>
+<div class="talk-item"><span>03</span><div><strong>Thịnh</strong><p>From Edge To Origin: CloudFront as Your Foundation</p></div></div>
+<div class="talk-item"><span>04</span><div><strong>Team VIB</strong><p>36 hrs with LotusHacks – Building UTMorpho from Idea to Reality</p></div></div>
+<div class="talk-item"><span>05</span><div><strong>Đào Đức</strong><p>Deep dive talk: How LLM actually works?</p></div></div>
+<div class="talk-item"><span>06</span><div><strong>Cát Vy</strong><p>Enterprise-Grade Multi-Agent System: The Case of Startup Credit Scoring</p></div></div>
+</div>
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+<h3>Nội dung nổi bật</h3>
+<h4>CloudFront &amp; edge delivery</h4>
+<ul>
+<li>CloudFront như lớp nền tảng từ edge đến origin.</li>
+<li>Liên hệ SportWear frontend: S3 + CloudFront giúp giảm độ trễ và tải origin.</li>
+</ul>
+<h4>AI Assistant &amp; Amazon Q</h4>
+<ul>
+<li>Xây trợ lý AI thân thiện hơn với người dùng.</li>
+<li>Gợi ý tích hợp AI vào trải nghiệm sản phẩm.</li>
+</ul>
+<h4>LLM &amp; Multi-Agent</h4>
+<ul>
+<li>Hiểu LLM ở mức khái niệm trước khi gắn vào sản phẩm.</li>
+<li>Case study multi-agent (credit scoring): thiết kế agent và chất lượng quyết định.</li>
+</ul>
+<h4>Hackathon → sản phẩm</h4>
+<ul>
+<li>Team VIB: 36 giờ LotusHacks xây UTMorpho.</li>
+<li>Bài học về prototype nhanh, teamwork và ưu tiên tính năng.</li>
+</ul>
+<h4>Second brain</h4>
+<ul>
+<li>Quản lý kiến thức cá nhân để học AWS và ghi chép internship hiệu quả hơn.</li>
+</ul>
 
-### Nội Dung Nổi Bật
+<h3>Những gì học được</h3>
+<ul>
+<li>CloudFront có thể là nền tảng phân phối, không chỉ “CDN thêm vào”.</li>
+<li>AI/LLM cần hiểu nguyên lý trước khi tích hợp.</li>
+<li>Làm sản phẩm nhanh cần scope rõ và teamwork tốt.</li>
+<li>Cộng đồng FCAJ là nguồn học hỏi thực tế ngoài lab cá nhân.</li>
+</ul>
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+<h3>Ứng dụng vào thực tập</h3>
+<ul>
+<li>Áp dụng CloudFront + S3 cho frontend SportWear.</li>
+<li>Ghi chép worklog/proposal theo hướng “second brain”.</li>
+<li>Ôn lại từng talk qua <a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a>.</li>
+</ul>
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
-
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
-
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
-
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
-
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+<h3>Trải nghiệm cá nhân</h3>
+<p>Tham gia <strong>FCAJ Community Day</strong> tại Bitexco giúp tôi vừa học kỹ thuật vừa gặp gỡ cộng đồng. Buổi sáng gồm CloudFront, AI Assistant, LLM, multi-agent và hackathon — phù hợp giai đoạn đang học AWS và thiết kế dự án e-commerce trên cloud.</p>
+</div>

@@ -1,31 +1,39 @@
 ---
 title: "Blog 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# Hiện đại hóa SignalR với AWS AppSync Event API
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Tôi tìm hiểu chủ đề **Modernizing SignalR with AWS AppSync Event API** — cách hiện đại hóa realtime của ứng dụng .NET/React bằng cách chuyển từ SignalR truyền thống sang **AWS AppSync Event API**.
 
-Các điểm chính cần nắm:
+Với app realtime (thông báo đơn hàng, live dashboard, trạng thái giao hàng, chat, pub/sub), SignalR thường giữ WebSocket giữa server và client. Khi scale, team dễ gặp việc phải quản lý nhiều connection, giữ server luôn chạy, sticky session hoặc Redis backplane.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+## Kiến trúc mới
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+![Kiến trúc AWS AppSync Event API](/images/3-BlogsPosted/blog3.png)
 
-...Hình ảnh...
+> Nguồn bài: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2206455833452710/)
 
-...Link...
+Bốn luồng chính:
 
-...Hướng dẫn...
+1. **React Client** gọi **.NET API Server** khi có hành động cần realtime.
+2. **.NET API Server** lấy API key/endpoint từ **AWS Secrets Manager** thay vì hard-code.
+3. Backend publish event lên **AWS AppSync Event API** qua HTTP.
+4. **AppSync** đẩy event realtime tới subscribers qua WebSocket (pub/sub).
+
+## Điểm khác so với SignalR truyền thống
+
+- **SignalR:** server vừa xử lý nghiệp vụ, vừa quản lý WebSocket connection.
+- **AppSync Event API:** server tập trung business logic và publish event; AWS lo phần kết nối, phân phối và scale.
+
+Phù hợp với thông báo realtime, live dashboard, cập nhật đơn hàng, collaborative app, IoT fan-out…
+
+Secrets Manager giúp tách credential khỏi source code. Triển khai thực tế có thể thêm IAM, CloudWatch, CloudTrail và tách môi trường Dev/Staging/Prod.
+
+## Kết luận
+
+Hiện đại hóa SignalR không phải bỏ realtime, mà chuyển phần hạ tầng WebSocket sang dịch vụ managed/serverless của AWS. Backend gọn hơn, frontend vẫn nhận cập nhật tức thì, còn AWS lo phần kết nối phía sau.

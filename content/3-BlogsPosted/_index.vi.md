@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Ba bài blog tôi đã đọc và chia sẻ trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) trong kỳ thực tập:
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+### [Blog 1 — Chống gian lận SMS OTP với Vonage Network API và Amazon Cognito](3.1-Blog1/)
+Giới thiệu cách kết hợp Vonage Network API và Amazon Cognito để giảm gian lận SMS OTP, SIM swap và AIT, đồng thời cải thiện trải nghiệm bằng silent authentication.
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 2 — Đơn giản hóa truy cập dữ liệu doanh nghiệp với AWS Transfer Family Web Apps và Terraform](3.2-Blog2/)
+Trình bày cổng truy cập dữ liệu trên Amazon S3 cho người dùng doanh nghiệp bằng Transfer Family Web Apps, IAM Identity Center, S3 Access Grants và Terraform.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 3 — Hiện đại hóa SignalR với AWS AppSync Event API](3.3-Blog3/)
+Thay kiến trúc SignalR truyền thống bằng AWS AppSync Event API để xử lý realtime, giảm tải backend và dễ scale hơn.

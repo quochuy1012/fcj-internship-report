@@ -1,31 +1,39 @@
 ---
 title: "Blog 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Modernizing SignalR with AWS AppSync Event API
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+I studied **Modernizing SignalR with AWS AppSync Event API** — how to modernize realtime for a .NET/React app by moving from traditional SignalR to the **AWS AppSync Event API**.
 
-Key points to know:
+For realtime apps (order alerts, live dashboards, delivery status, chat, pub/sub), SignalR usually keeps WebSocket connections between server and clients. At scale, teams often struggle with connection management, always-on servers, sticky sessions, or a Redis backplane.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+## New architecture
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+![AWS AppSync Event API architecture](/images/3-BlogsPosted/blog3.png)
 
-...Image...
+> Source: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2206455833452710/)
 
-...Link...
+Four main flows:
 
-...Guide...
+1. The **React Client** calls the **.NET API Server** when a realtime action happens.
+2. The **.NET API Server** loads API keys/endpoints from **AWS Secrets Manager** instead of hard-coding them.
+3. The backend publishes events to the **AWS AppSync Event API** over HTTP.
+4. **AppSync** pushes realtime events to subscribers over WebSocket (pub/sub).
+
+## Difference from traditional SignalR
+
+- **SignalR:** the server handles both business logic and WebSocket connections.
+- **AppSync Event API:** the server focuses on business logic and publishing events; AWS handles connections, fan-out, and scale.
+
+This fits realtime notifications, live dashboards, order updates, collaborative apps, and IoT fan-out.
+
+Secrets Manager keeps credentials out of source code. In practice you can also add IAM, CloudWatch, CloudTrail, and separate Dev/Staging/Prod environments.
+
+## Conclusion
+
+Modernizing SignalR does not mean dropping realtime. It means moving WebSocket infrastructure to a managed/serverless AWS service. The backend stays lean, the frontend still gets instant updates, and AWS owns the connection layer.
