@@ -1,31 +1,64 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-07-19
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Deploying BravelSport on AWS
 
-#### Overview
+BravelSport is an e-commerce and sports facility booking platform. The source includes a React/Vite frontend and a NestJS backend using MongoDB (Mongoose), JWT auth, and Socket.IO for realtime chat.
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+This workshop describes the **target architecture and hands-on deployment process**. It does not claim the live site already runs the full AWS architecture unless Console evidence is available.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+## Target architecture
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+- Frontend is built as static files in a private S3 Frontend Bucket and served by CloudFront.
+- AWS WAF is associated with CloudFront at the edge.
+- CloudFront forwards `/api/*` and `/socket.io/*` to an Application Load Balancer.
+- The ALB forwards traffic through an `ip` Target Group to ECS Fargate on port `3000`.
+- Socket.IO uses `/socket.io/*`; chat uses the `/chat` namespace.
+- ECS Fargate runs in Private Subnets without public IPs.
+- ECS reaches MongoDB Atlas via NAT Gateway and Internet Gateway.
+- An EC2 Ubuntu instance is only a build/deploy machine — not production ingress.
+- S3 Media is a workshop extension (current code also supports Cloudinary / local `/uploads`).
 
-#### Content
+![BravelSport AWS Architecture](/images/5-Workshop/architecture/bravelsport-aws-architecture.png)
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+## Workshop contents
+
+1. [5.1. Workshop overview](./5.1-Workshop-overview/)
+2. [5.2. Prerequisites](./5.2-Prerequisite/)
+3. [5.3. Building the network infrastructure](./5.3-Network-infrastructure/)
+4. [5.4. Backend deployment](./5.4-Backend-deployment/)
+5. [5.5. Frontend deployment](./5.5-Frontend-deployment/)
+6. [5.6. Database and media](./5.6-Data-and-media/)
+7. [5.7. End-to-end testing](./5.7-Testing/)
+8. [5.8. Resource cleanup](./5.8-Cleanup/)
+
+### Notes
+
+Do not include access keys, secrets, MongoDB connection strings, JWT secrets, auth cookies, or full Account IDs. Unconfirmed values stay as `[TO BE CONFIRMED]`.
+
+## Verification
+
+- Hugo menu shows sections 5.1–5.8 in order.
+- Every image path starts with `/images/5-Workshop/`.
+- Pages clearly separate the EC2 Build Machine from the ECS Fargate runtime.
+
+## Common issues
+
+| Issue | Cause | Resolution |
+|---|---|---|
+| Wrong menu order | Bad `weight` / `pre` | Fix front matter |
+| Images missing | Wrong `static/` path | Match `/images/5-Workshop/...` |
+| Broken child links | Renamed folders | Check relative links |
+
+## Summary
+
+This workshop covers preparation, networking, backend/frontend deploy, database/media, testing, and cleanup.
+
+## Navigation
+
+- Next: [5.1. Workshop overview](./5.1-Workshop-overview/)

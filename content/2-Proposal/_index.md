@@ -1,127 +1,160 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-07-19
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# SportWear E-Commerce Platform
-## Sportswear e-commerce website deployed on AWS
+# BravelSport Sports Web Platform
+
+## AWS architecture proposal for a secure, scalable deployment
 
 ### 1. Executive Summary
 
-**SportWear** is a sportswear e-commerce website that lets users browse products, add items to the cart, place orders, and upload product images.
+**BravelSport** is a sports web platform available at [bravelsport.com](https://bravelsport.com/). It serves customers, players, clubs, court owners, and administrators.
 
-The platform is deployed on AWS with a clear separation between **frontend** (S3 + CloudFront) and **backend** (ECS Fargate behind an Application Load Balancer). Users resolve the domain with **Route 53**. **AWS WAF** is associated with the **CloudFront** distribution for basic web protection, while CloudFront accelerates and caches the frontend. Sensitive configuration is stored in **Secrets Manager**. Docker images are stored in **Amazon ECR**. The database uses a managed service (**Amazon DocumentDB**, MongoDB-compatible). Supporting services are reached privately via **VPC endpoints** (Interface/PrivateLink for ECR, Secrets Manager, CloudWatch; Gateway endpoint for S3).
+Core features include product browsing/search, accounts, cart and orders, court booking and schedule management, image uploads, and admin management of users, products, orders, and courts.
+
+This proposal describes an AWS deployment that separates frontend, backend, networking, storage, monitoring, and database.
+
+- Frontend: static build on **Amazon S3**, delivered by **Amazon CloudFront**
+- Domain: **Amazon Route 53** for `bravelsport.com`
+- Edge protection: **AWS WAF** associated with CloudFront
+- Backend: Docker images in **Amazon ECR**, run on **Amazon ECS Fargate** in private subnets
+- Ingress: **Application Load Balancer** forwards API traffic to ECS
+- Database: **MongoDB Atlas** (external to AWS)
+- Media/config: **Amazon S3**; access via **AWS IAM**; telemetry via **Amazon CloudWatch**
+
+The design fits workshop / MVP / small–medium workloads.
 
 ### 2. Problem Statement
 
-**Problem**
-- Small sportswear shops often lack a scalable online store for catalog, cart, checkout, and image management.
-- Hosting everything on a single public server is hard to secure, scale, and monitor.
+Without a clear architecture, BravelSport risks:
 
-**Solution**
-- Build SportWear as a cloud-native e-commerce site on AWS.
-- Static frontend on **S3** distributed by **CloudFront**.
-- Dynamic APIs on **ECS Fargate** in **private subnets**, fronted by **ALB**.
-- Managed database with **DocumentDB**.
-- High availability with **2 Availability Zones**, each having **Public** and **Private** subnets.
-- Private service access via **VPC endpoints** (PrivateLink for ECR / Secrets Manager / CloudWatch; Gateway for S3).
+- Backend exposed directly to the Internet
+- Frontend and backend coupled on one host
+- Media lost when containers are replaced
+- Hard backend versioning/rollback
+- No central logs
+- Poor scale characteristics
+- Secrets leaked from source code
+- AWS cost continuing after the workshop
 
-**Benefits**
-- Faster page loads via CDN.
-- Better security: backend has no public IP.
-- Easier operations with managed DB, Secrets Manager, and CloudWatch.
-- Architecture aligned with mentor feedback (high-level design, Multi-AZ, VPC endpoints, managed database).
+**Solution:** separate frontend (S3 + CloudFront), backend (private ECS Fargate), media (S3), and data (MongoDB Atlas).
 
-### 3. Solution Architecture
+### 3. Deployment Goals
 
-#### Request flow
-1. Users resolve the domain with **Amazon Route 53**.
-2. **Amazon CloudFront** (with **AWS WAF** web ACL attached) serves the frontend from the **S3 Frontend Bucket**.
-3. Dynamic actions (products, cart, orders, image upload) go from CloudFront to the **Application Load Balancer**.
-4. ALB forwards traffic to **ECS Fargate** tasks in **Private Subnets**.
-5. Backend APIs handle: **product**, **cart**, **order**, **user**, and **upload image**.
-6. DocumentDB, secrets, and images are reached from private subnets; metrics/logs go to **CloudWatch**.
+- Clear AWS architecture for BravelSport
+- Separate frontend / backend / media / database
+- No public IP on ECS tasks
+- Docker + ECR for backend packaging
+- S3 for media; CloudWatch for logs/metrics; IAM for access
+- Scale by increasing ECS tasks
+- Track cost and clean up unused resources
 
-#### High-level architecture (mentor-aligned)
+### 4. Solution Architecture
 
-![SportWear High-Level Architecture](/images/2-Proposal/sportwear_architecture.png)
+Three zones: **Edge & Frontend**, **VPC & Backend**, **Supporting services & storage**.
 
-**Design notes (high-level)**
-- Diagram focuses on major components (no detailed Security Group / OAC boxes).
-- **2 AZs**, each with **Public Subnet** + **Private Subnet**.
-- **VPC endpoints**: Interface/PrivateLink for **Secrets Manager**, **CloudWatch**, **ECR**; Gateway endpoint for **S3**.
-- Database: **Amazon DocumentDB** (managed, MongoDB-compatible). Alternative option: **Amazon DynamoDB**.
+![BravelSport AWS Architecture](/images/2-Proposal/bravelsport_aws_architecture.png)
 
-#### AWS services used
-| Layer | Service | Role |
-| --- | --- | --- |
-| DNS | Amazon Route 53 | Domain routing |
-| Security edge | AWS WAF | Web request filtering |
-| CDN | Amazon CloudFront | Cache & distribute frontend |
-| Frontend storage | Amazon S3 | Static website assets |
-| Load balancing | Application Load Balancer | Distribute API traffic |
-| Compute | Amazon ECS Fargate | Run backend containers |
-| Container registry | Amazon ECR | Store Docker images |
-| Secrets | AWS Secrets Manager | DB URL, JWT secret, API keys |
-| Observability | Amazon CloudWatch | Logs & metrics |
-| Private access | VPC endpoints | PrivateLink (ECR, Secrets Manager, CloudWatch) + S3 Gateway |
-| Database | Amazon DocumentDB | Managed MongoDB-compatible database |
-| Networking | VPC (2 AZ) | Public + Private subnets for HA |
+#### 4.1 Edge & Frontend
 
-### 4. Technical Implementation
+Route 53 resolves `bravelsport.com` to CloudFront. WAF inspects requests on the distribution. CloudFront serves the private S3 Frontend Bucket (no direct public bucket access).
 
-**Phases**
-1. Foundation: IAM, VPC, EC2/S3 basics, CLI, monitoring.
-2. Architecture design: SportWear high-level design, service selection, Multi-AZ VPC.
-3. Deploy frontend: S3 + CloudFront.
-4. Deploy backend: Docker → ECR → ECS Fargate + ALB.
-5. Secure & operate: WAF, Secrets Manager, CloudWatch, DB connectivity, API tests.
-6. Optimize: mentor feedback, Multi-AZ, VPC endpoints, HA checklist & docs.
+#### 4.2 VPC & Backend
 
-**Core APIs**
-- Product, Cart, Order, User, Upload image
+ALB and NAT Gateway sit in public subnets; ECS Fargate tasks sit in private subnets without public IPs. The ALB forwards API traffic to ECS via a target group and health checks. ECS inbound is limited to the ALB security group.
 
-### 5. Timeline & Milestones
+Outbound from ECS to ECR, CloudWatch, S3, and MongoDB Atlas goes through NAT Gateway → Internet Gateway.
 
-| Period | Focus |
-| --- | --- |
-| Weeks 1–6 | AWS fundamentals (Console, EC2, S3, CloudFront, CloudWatch, CLI) |
-| Week 7 | SportWear requirements & high-level architecture |
-| Week 8 | Frontend (S3/CloudFront) + Backend (ECS/ECR/ALB) |
-| Week 9 | WAF, Secrets Manager, CloudWatch, DB & API testing |
-| Week 10 | Multi-AZ & VPC endpoint optimization |
-| Week 11 | Production-style architecture, e-commerce tests, docs & finalize report (24/07 – 31/07) |
+#### 4.3 Supporting services & storage
 
-### 6. Budget Estimation
+- **ECR** — backend images
+- **CloudWatch** — logs/metrics
+- **S3 Frontend / Media / (optional) private config** buckets
+- **IAM** — least-privilege roles
+- **MongoDB Atlas** — application data
 
-Target: keep lab spend low — use **Free Tier / student credits** for eligible services, and watch paid services carefully (especially DocumentDB).
+Do not store credentials in source code or images. If a private config bucket is used: Block Public Access, encryption, Task Role-only read, no public URL, not shared with the frontend bucket, never commit secrets to GitHub.
 
-Main cost drivers to watch:
-- CloudFront data transfer
-- ECS Fargate task hours
-- DocumentDB instance hours (usually outside Free Tier)
-- S3 storage & requests
-- ALB hours
+DB path: `ECS Fargate → NAT Gateway → Internet Gateway → MongoDB Atlas`  
+Prefer Atlas allowlisting by NAT Elastic IP (not `0.0.0.0/0`).
 
-Use [AWS Pricing Calculator](https://calculator.aws/) before scaling up and enable billing alerts.
+### 5. AWS Services Used
 
-### 7. Risk Assessment
+| Service | Role |
+|---|---|
+| Route 53 | Domain / DNS to CloudFront |
+| CloudFront | Frontend CDN + API path to ALB |
+| AWS WAF | Edge request filtering |
+| S3 | Frontend, media, optional config |
+| VPC (public/private subnets) | Network isolation |
+| ALB / Target Group | API ingress + health checks |
+| NAT / IGW / Elastic IP | Private outbound path |
+| ECS Fargate | Backend runtime |
+| ECR | Container registry |
+| IAM | Access control |
+| CloudWatch | Observability |
+| MongoDB Atlas | External database |
 
-| Risk | Impact | Mitigation |
-| --- | --- | --- |
-| Unexpected AWS cost | Medium | Prefer Free Tier where possible, billing alarms, cleanup unused resources |
-| AZ / service outage | Medium | Multi-AZ VPC + ALB across AZs |
-| Secret leakage | High | Secrets Manager + least-privilege IAM |
-| API / DB failure | Medium | CloudWatch logs/metrics + health checks |
-| Architecture review changes | Low | Keep high-level diagram; iterate from mentor feedback |
+### 6. Main Request Flow
 
-### 8. Expected Outcomes
+1. User opens `bravelsport.com`
+2. Route 53 → CloudFront
+3. WAF inspects the request
+4. CloudFront serves static assets from S3
+5. API paths go CloudFront → ALB → ECS Fargate
+6. ECS runs business logic with IAM permissions
+7. ECS pulls images from ECR; reads/writes media on S3
+8. ECS sends logs/metrics to CloudWatch
+9. ECS reaches MongoDB Atlas via NAT
+10. Response returns through ALB and CloudFront
 
-- A working SportWear website on AWS: browse, cart, order, image upload.
-- Clear high-level architecture with Multi-AZ and VPC endpoints.
-- Backend isolated in private subnets; frontend accelerated by CloudFront.
-- Managed database (DocumentDB) and centralized secrets/monitoring.
-- Internship report artifacts: proposal, worklog, workshop documentation.
+### 7. Security Design
+
+**SG-ALB:** allow required inbound; outbound to ECS backend port only.  
+**SG-ECS:** inbound only from SG-ALB; no public backend port; outbound as needed.
+
+Also: no ECS public IPs; S3 Block Public Access; least-privilege IAM; encrypt credentials; Atlas restricted to NAT EIP; test WAF in Count before Block.
+
+### 8. Three-Month Roadmap
+
+| Month | Focus | Outcome |
+|---|---|---|
+| 1 | Learn AWS services + draft BravelSport architecture | Service notes + initial diagram |
+| 2 | Docker/ECR/ECS trials, S3/CloudFront, VPC/ALB, Atlas connectivity | Working component proofs |
+| 3 | Full deploy, integrate S3/Atlas/IAM/CloudWatch, test + docs | Live workshop system + guide |
+
+### 9. Cost & Optimization
+
+Main drivers: Route 53, CloudFront, S3, WAF, ALB, ECS Fargate, NAT Gateway, Elastic IP, ECR, CloudWatch, MongoDB Atlas.
+
+Estimate with the [AWS Pricing Calculator](https://calculator.aws/) for the chosen Region and measured usage.
+
+Optimize by right-sizing tasks, shortening lab runtime, deleting unused NAT/ALB/EIP/images, limiting log retention, tuning CloudFront cache, and cleaning up after the workshop.
+
+### 10. Risks & Mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Public S3 | Block Public Access + policy review |
+| Leaked credentials | Encrypt + Task Role only; never commit secrets |
+| ECS cannot pull image | Check ECR, IAM, NAT |
+| ALB health check fails | Match port/path/security groups |
+| Atlas unreachable | Check EIP, NAT route, credentials |
+| WAF false positives | Count mode first |
+| NAT cost growth | Monitor and clean up |
+
+### 11. Expected Outcomes
+
+BravelSport on AWS with Route 53 domain, S3+CloudFront frontend, private ECS Fargate backend behind ALB, ECR images, S3 media, MongoDB Atlas data, CloudWatch telemetry, IAM controls, plus clear test and cleanup procedures.
+
+### 12. Future Improvements
+
+CloudWatch Alarms, AWS Budgets, CI/CD, ECS Auto Scaling, multi-AZ, VPC Endpoints to reduce NAT traffic, dedicated secrets management, and backups for S3/Atlas.
+
+### 13. Conclusion
+
+Separating frontend, backend, media, and database gives BravelSport a clearer AWS deployment path suitable for the workshop and ready to grow later.
