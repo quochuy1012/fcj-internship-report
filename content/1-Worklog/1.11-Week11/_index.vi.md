@@ -11,7 +11,7 @@ pre: " <b> 1.11. </b> "
 ### Mục tiêu tuần 11
 
 * Hoàn thiện kiến trúc triển khai theo mô hình Production trên AWS.
-* Kiểm thử các chức năng của hệ thống (đăng nhập, quản lý sản phẩm, giỏ hàng, đặt hàng, upload hình ảnh).
+* Kiểm thử các chức năng BravelSport (đăng nhập, sản phẩm, giỏ hàng, đặt hàng, đặt sân, upload ảnh).
 * Tối ưu hiệu năng và kiểm tra Logs, Metrics bằng Amazon CloudWatch.
 * Hoàn thiện sơ đồ kiến trúc và tài liệu kỹ thuật của dự án.
 * Hoàn thiện báo cáo thực tập.
@@ -22,7 +22,7 @@ pre: " <b> 1.11. </b> "
 | STT | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
 | 1 | Hoàn thiện kiến trúc triển khai theo mô hình Production trên AWS | 24/07/2026 | 31/07/2026 | <https://aws.amazon.com/architecture/> |
-| 2 | Kiểm thử các chức năng của hệ thống (đăng nhập, quản lý sản phẩm, giỏ hàng, đặt hàng, upload hình ảnh) | 24/07/2026 | 31/07/2026 | <https://hcm-rules.awsfcaj.com/3-project/> |
+| 2 | Kiểm thử BravelSport (đăng nhập, sản phẩm, giỏ hàng, đặt hàng, đặt sân, upload ảnh) | 24/07/2026 | 31/07/2026 | <https://hcm-rules.awsfcaj.com/3-project/> |
 | 3 | Tối ưu hiệu năng và kiểm tra Logs, Metrics bằng Amazon CloudWatch | 24/07/2026 | 31/07/2026 | <https://docs.aws.amazon.com/cloudwatch/> |
 | 4 | Hoàn thiện sơ đồ kiến trúc và tài liệu kỹ thuật của dự án | 24/07/2026 | 31/07/2026 | <https://hcm-rules.awsfcaj.com/3-project/> |
 | 5 | Hoàn thiện báo cáo thực tập | 24/07/2026 | 31/07/2026 | <https://github.com/quochuy1012/fcj-internship-report> |
@@ -30,7 +30,7 @@ pre: " <b> 1.11. </b> "
 
 ### Kết quả đạt được
 
-* Chốt kiến trúc SportWear theo hướng gần production (Multi-AZ, backend private, DocumentDB).
-* Kiểm thử end-to-end các chức năng e-commerce chính.
+* Chốt kiến trúc BravelSport gần production (Route 53, CloudFront+WAF, ECS private, ALB, NAT, MongoDB Atlas).
+* Kiểm thử end-to-end các luồng e-commerce và đặt sân chính.
 * Theo dõi Logs/Metrics trên CloudWatch.
 * Hoàn thiện sơ đồ, tài liệu kỹ thuật và bộ báo cáo thực tập.

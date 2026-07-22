@@ -40,7 +40,7 @@ pre: " <b> 4.1. </b> "
 <h4>CloudFront &amp; edge delivery</h4>
 <ul>
 <li>CloudFront as a foundation from edge to origin.</li>
-<li>Linked to SportWear frontend: S3 + CloudFront for lower latency and origin load.</li>
+<li>Linked to BravelSport frontend: S3 + CloudFront for lower latency and origin load.</li>
 </ul>
 <h4>AI Assistant &amp; Amazon Q</h4>
 <ul>
@@ -72,7 +72,7 @@ pre: " <b> 4.1. </b> "
 
 <h3>Applying to internship</h3>
 <ul>
-<li>Use CloudFront + S3 for the SportWear frontend.</li>
+<li>Use CloudFront + S3 for the BravelSport frontend.</li>
 <li>Keep worklog/proposal notes structured like a “second brain”.</li>
 <li>Review talks via <a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a>.</li>
 </ul>

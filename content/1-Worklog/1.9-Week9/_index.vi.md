@@ -13,7 +13,7 @@ pre: " <b> 1.9. </b> "
 * Cấu hình AWS WAF bảo vệ ứng dụng Web.
 * Quản lý thông tin nhạy cảm bằng AWS Secrets Manager.
 * Theo dõi Logs và Metrics bằng Amazon CloudWatch.
-* Kết nối cơ sở dữ liệu và kiểm thử các API của hệ thống.
+* Kết nối **MongoDB Atlas** và kiểm thử các API của BravelSport.
 
 ### Công việc đã làm
 
@@ -22,11 +22,11 @@ pre: " <b> 1.9. </b> "
 | 1 | Cấu hình AWS WAF bảo vệ ứng dụng Web | 10/07/2026 | 17/07/2026 | <https://docs.aws.amazon.com/waf/> |
 | 2 | Quản lý thông tin nhạy cảm bằng AWS Secrets Manager | 10/07/2026 | 17/07/2026 | <https://docs.aws.amazon.com/secretsmanager/> |
 | 3 | Theo dõi Logs và Metrics bằng Amazon CloudWatch | 10/07/2026 | 17/07/2026 | <https://docs.aws.amazon.com/cloudwatch/> |
-| 4 | Kết nối cơ sở dữ liệu và kiểm thử các API của hệ thống | 10/07/2026 | 17/07/2026 | <https://docs.aws.amazon.com/documentdb/> |
+| 4 | Kết nối MongoDB Atlas và kiểm thử API BravelSport | 10/07/2026 | 17/07/2026 | <https://www.mongodb.com/docs/atlas/> |
 
 ### Kết quả đạt được
 
 * Gắn WAF với CloudFront để bảo vệ web cơ bản.
 * Lưu secret ngoài source code bằng Secrets Manager.
 * Theo dõi logs/metrics trên CloudWatch.
-* Kết nối DocumentDB và kiểm thử API chính của SportWear.
+* Kết nối MongoDB Atlas và kiểm thử API chính của BravelSport.

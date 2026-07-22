@@ -12,18 +12,18 @@ pre: " <b> 1.10. </b> "
 
 * Optimize architecture based on lecturer and mentor feedback.
 * Add a Multi-AZ model for the VPC.
-* Research PrivateLink for AWS services (ECR, S3, Secrets Manager, CloudWatch).
+* Complete ECS outbound access (NAT Gateway / Elastic IP) for MongoDB Atlas; research VPC Endpoints as a future improvement.
 
 ### Tasks completed
 
 | No. | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| 1 | Optimize architecture based on lecturer and mentor feedback | 17/07/2026 | 24/07/2026 | <https://hcm-rules.awsfcaj.com/3-project/> |
-| 2 | Add a Multi-AZ model for the VPC | 17/07/2026 | 24/07/2026 | <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-availability-zones.html> |
-| 3 | Research PrivateLink for AWS services (ECR, S3, Secrets Manager, CloudWatch) | 17/07/2026 | 24/07/2026 | <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html> |
+| 1 | Optimize architecture from mentor/lecturer feedback | 17/07/2026 | 24/07/2026 | <https://hcm-rules.awsfcaj.com/3-project/> |
+| 2 | Add Multi-AZ design for the VPC | 17/07/2026 | 24/07/2026 | <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-availability-zones.html> |
+| 3 | Configure NAT Gateway/EIP for ECS outbound and Atlas allowlisting; research VPC Endpoints | 17/07/2026 | 24/07/2026 | <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html> |
 
 ### Achievements
 
-* Revised SportWear architecture from mentor/lecturer feedback.
-* Extended the VPC across multiple AZs.
-* Documented VPC endpoint options: PrivateLink for ECR/Secrets Manager/CloudWatch and Gateway for S3.
+* Revised the BravelSport architecture from mentor/lecturer feedback (high-level, public/private split).
+* Extended the VPC across multiple AZs for higher availability.
+* Private ECS reaches MongoDB Atlas through a NAT Gateway with a stable Elastic IP; VPC Endpoints noted as a later cost optimization.

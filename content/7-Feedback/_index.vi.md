@@ -14,10 +14,10 @@ Tôi viết phần này theo đúng những gì trải qua trong **First Cloud A
 Không gian học khá thoải mái: hỏi trong group thường có người trả lời, tài liệu cũng đủ để bắt đầu. Điểm hơi thiếu là thời gian “chỉ ngồi chat kỹ thuật” nhiều, còn buổi để quen nhau hơn thì ít — nếu có thêm 1–2 buổi ngắn kiểu networking thì sẽ dễ hỏi bài hơn.
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor không đưa đáp án ngay; thường bảo tôi thử rồi mới gợi ý. Lần review SportWear, góp ý về diagram high-level, Multi-AZ và VPC endpoint giúp tôi hiểu vì sao bản đầu còn “lab-like”. Admin hỗ trợ lịch và giấy tờ ổn, không phải chờ lâu.
+Mentor không đưa đáp án ngay; thường bảo tôi thử rồi mới gợi ý. Lần review BravelSport, góp ý về diagram high-level, Multi-AZ và NAT Gateway giúp tôi hiểu vì sao bản đầu còn “lab-like”. Admin hỗ trợ lịch và giấy tờ ổn, không phải chờ lâu.
 
 **3. Sự phù hợp với chuyên ngành**  
-Tôi học CNTT ở HUTECH nên phần mạng, hệ thống vẫn dùng được. Cái mới thật sự là cloud: trước đây nghe tên dịch vụ nhiều, kỳ này mới gắn chúng vào một website bán hàng cụ thể.
+Tôi học CNTT ở HUTECH nên phần mạng, hệ thống vẫn dùng được. Cái mới thật sự là cloud: trước đây nghe tên dịch vụ nhiều, kỳ này mới gắn chúng vào **BravelSport** — một website bán đồ thể thao và đặt sân cụ thể.
 
 **4. Cơ hội học hỏi**  
 Học nhiều nhất từ việc làm lại kiến trúc sau feedback, viết proposal và nghe talk ở Community Day. Skill mềm thì thấy rõ nhất ở chỗ phải giải thích được tôi đang làm gì, không chỉ click Console cho xong.
@@ -30,13 +30,13 @@ Lộ trình (worklog → proposal → event → báo cáo) rõ nên biết tuầ
 
 ### Câu hỏi khác
 
-- **Hài lòng nhất:** Lúc proposal SportWear được chỉnh đúng hướng sau feedback mentor — cảm giác dự án bắt đầu “ra kiến trúc” chứ không còn là đống dịch vụ rời.
+- **Hài lòng nhất:** Lúc proposal BravelSport được chỉnh đúng hướng sau feedback mentor — cảm giác dự án bắt đầu “ra kiến trúc” chứ không còn là đống dịch vụ rời.
 - **Nên cải thiện:** Review kiến trúc sớm hơn một chút; và có thêm buổi ngắn về lỗi hay gặp khi lên ECS / networking, vì phần này tốn thời gian debug nhất.
 - **Có giới thiệu bạn bè không?** Có, nếu bạn đó chịu ngồi lab và viết tài liệu. Chương trình không “nhẹ”, nhưng học được thứ dùng được.
 
 ### Đề xuất & mong muốn
 
-- Cho checklist kiến trúc HA ngay từ giai đoạn proposal đầu (Multi-AZ, VPC endpoint, monitoring, cleanup), để đỡ sửa lớn về sau.
+- Cho checklist kiến trúc HA ngay từ giai đoạn proposal đầu (Multi-AZ, NAT Gateway, monitoring, cleanup), để đỡ sửa lớn về sau.
 - Thêm peer review ngắn giữa các bạn cùng kỳ — nhìn diagram người khác cũng học được nhiều.
 - Tôi muốn tiếp tục theo hướng vận hành và tối ưu chi phí sau bootcamp này.
 - Cảm ơn mentor và team FCAJ đã kèm trong kỳ thực tập.

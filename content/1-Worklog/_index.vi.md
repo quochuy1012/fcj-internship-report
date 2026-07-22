@@ -10,7 +10,7 @@ Nhật ký công việc ghi lại quá trình thực tập của tôi tại chư
 
 Mỗi tuần gồm: **mục tiêu**, **công việc đã làm**, **kết quả đạt được**, kèm tài liệu tham khảo.
 
-Từ tuần 7 trở đi, dự án cá nhân tập trung vào nền tảng **SportWear E-Commerce** trên AWS.
+Từ tuần 7 trở đi, dự án cá nhân tập trung vào nền tảng **BravelSport** (`bravelsport.com`) trên AWS.
 
 **Tuần 1 (15/05/2026 – 22/05/2026):** [Tổng quan Cloud Computing, AWS Console & IAM](1.1-week1/)
 
@@ -24,12 +24,12 @@ Từ tuần 7 trở đi, dự án cá nhân tập trung vào nền tảng **Spor
 
 **Tuần 6 (19/06/2026 – 26/06/2026):** [AWS CLI, quản lý tài nguyên & IAM Role](1.6-week6/)
 
-**Tuần 7 (26/06/2026 – 03/07/2026):** [Thiết kế kiến trúc SportWear — Route 53, CloudFront, ECS, ALB, S3, ECR](1.7-week7/)
+**Tuần 7 (26/06/2026 – 03/07/2026):** [Thiết kế kiến trúc BravelSport — Route 53, CloudFront, ECS, ALB, S3, ECR](1.7-week7/)
 
 **Tuần 8 (03/07/2026 – 10/07/2026):** [Triển khai Frontend (S3/CloudFront) & Backend (ECS Fargate/ECR/ALB)](1.8-week8/)
 
-**Tuần 9 (10/07/2026 – 17/07/2026):** [WAF, Secrets Manager, CloudWatch, DB & kiểm thử API](1.9-week9/)
+**Tuần 9 (10/07/2026 – 17/07/2026):** [WAF, Secrets Manager, CloudWatch, MongoDB Atlas & kiểm thử API](1.9-week9/)
 
-**Tuần 10 (17/07/2026 – 24/07/2026):** [Tối ưu kiến trúc — Multi-AZ & PrivateLink](1.10-week10/)
+**Tuần 10 (17/07/2026 – 24/07/2026):** [Tối ưu kiến trúc — Multi-AZ, NAT Gateway & MongoDB Atlas](1.10-week10/)
 
-**Tuần 11 (24/07/2026 – 31/07/2026):** [Production, kiểm thử e-commerce, tài liệu & hoàn thiện báo cáo](1.11-week11/)
+**Tuần 11 (24/07/2026 – 31/07/2026):** [Production, kiểm thử e-commerce & đặt sân, tài liệu & hoàn thiện báo cáo](1.11-week11/)

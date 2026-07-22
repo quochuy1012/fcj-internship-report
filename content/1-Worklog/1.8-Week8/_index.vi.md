@@ -26,6 +26,6 @@ pre: " <b> 1.8. </b> "
 
 ### Kết quả đạt được
 
-* Triển khai frontend SportWear trên S3 + CloudFront.
+* Triển khai frontend BravelSport trên S3 + CloudFront.
 * Đóng gói Docker image và đẩy lên ECR.
 * Chạy backend trên ECS Fargate phía sau ALB.

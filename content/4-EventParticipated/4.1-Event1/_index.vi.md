@@ -40,7 +40,7 @@ pre: " <b> 4.1. </b> "
 <h4>CloudFront &amp; edge delivery</h4>
 <ul>
 <li>CloudFront như lớp nền tảng từ edge đến origin.</li>
-<li>Liên hệ SportWear frontend: S3 + CloudFront giúp giảm độ trễ và tải origin.</li>
+<li>Liên hệ BravelSport frontend: S3 + CloudFront giúp giảm độ trễ và tải origin.</li>
 </ul>
 <h4>AI Assistant &amp; Amazon Q</h4>
 <ul>
@@ -72,7 +72,7 @@ pre: " <b> 4.1. </b> "
 
 <h3>Ứng dụng vào thực tập</h3>
 <ul>
-<li>Áp dụng CloudFront + S3 cho frontend SportWear.</li>
+<li>Áp dụng CloudFront + S3 cho frontend BravelSport.</li>
 <li>Ghi chép worklog/proposal theo hướng “second brain”.</li>
 <li>Ôn lại từng talk qua <a href="https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1KF14Za3sMxDnap0HFEL-TcsTdsuGpovr</a>.</li>
 </ul>

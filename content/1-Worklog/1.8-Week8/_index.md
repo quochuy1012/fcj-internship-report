@@ -26,6 +26,6 @@ pre: " <b> 1.8. </b> "
 
 ### Achievements
 
-* Deployed SportWear frontend on S3 + CloudFront.
+* Deployed BravelSport frontend on S3 + CloudFront.
 * Built Docker images and pushed them to ECR.
 * Ran backend on ECS Fargate behind an ALB.
