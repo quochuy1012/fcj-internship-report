@@ -65,7 +65,7 @@ Chụp kết quả docker build và docker push hoàn tất. Che Account ID, rep
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Build và push backend image](/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
+![Build và push backend image](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
 
 ## Kiểm tra kết quả
 
@@ -85,7 +85,7 @@ Thông tin image hiện tại:
 | Health check path | `/` |
 
 
-![Docker image trong Amazon ECR](/images/5-Workshop/5.4-Backend-deployment/ecr-backend-image.png)
+![Docker image trong Amazon ECR](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
 ## Lỗi thường gặp
 
 | Lỗi | Cách xử lý |

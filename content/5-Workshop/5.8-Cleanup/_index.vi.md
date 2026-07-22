@@ -51,13 +51,13 @@ Chụp NAT Gateway ở trạng thái Deleting/Deleted. Che NAT ID và Elastic IP
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-<!-- Ảnh chưa có trong static: /images/5-Workshop/5.8-Cleanup/delete-nat-gateway.png -->
+<!-- Ảnh chưa có trong static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/delete-nat-gateway.png -->
 <!-- CHÈN ẢNH TẠI ĐÂY:
 Chụp EC2 Build Machine trạng thái Terminated. Che Instance ID và IP.
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-<!-- Ảnh chưa có trong static: /images/5-Workshop/5.8-Cleanup/ec2-terminated.png -->
+<!-- Ảnh chưa có trong static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/ec2-terminated.png -->
 
 ## Kiểm tra kết quả
 
@@ -75,7 +75,7 @@ Chụp VPC resource map hoặc Resource Explorer không còn tài nguyên worksh
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-<!-- Ảnh chưa có trong static: /images/5-Workshop/5.8-Cleanup/verify-cleanup.png -->
+<!-- Ảnh chưa có trong static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/verify-cleanup.png -->
 
 ## Lỗi thường gặp
 

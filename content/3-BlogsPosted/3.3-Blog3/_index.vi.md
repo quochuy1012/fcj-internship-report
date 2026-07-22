@@ -14,7 +14,7 @@ Với app realtime (thông báo đơn hàng, live dashboard, trạng thái giao 
 
 ## Kiến trúc mới
 
-![Kiến trúc AWS AppSync Event API](/images/3-BlogsPosted/blog3.png)
+![Kiến trúc AWS AppSync Event API](/fcj-internship-report/images/3-BlogsPosted/blog3.png)
 
 > Nguồn bài: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2206455833452710/)
 

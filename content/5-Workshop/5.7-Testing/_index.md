@@ -180,7 +180,7 @@ Mask:
 - Sensitive user data
 -->
 
-![End-to-end browser testing](/images/5-Workshop/5.7-Testing/end-to-end-browser-test.jpg)
+![End-to-end browser testing](/fcj-internship-report/images/5-Workshop/5.7-Testing/end-to-end-browser-test.jpg)
 
 ```text
 https://bravelsport.com/admin
@@ -340,7 +340,7 @@ Mask:
 - Task ID when unnecessary
 -->
 
-![CloudWatch Logs during testing](/images/5-Workshop/5.7-Testing/cloudwatch-test-logs.jpg)
+![CloudWatch Logs during testing](/fcj-internship-report/images/5-Workshop/5.7-Testing/cloudwatch-test-logs.jpg)
 
 
 ## Results matrix

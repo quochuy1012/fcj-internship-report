@@ -26,7 +26,7 @@ Draw Route 53 → CloudFront/WAF with an S3 origin and an ALB origin. Clearly la
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Frontend delivery overview](/images/5-Workshop/5.5-Frontend-deployment/frontend-delivery-overview.png)
+![Frontend delivery overview](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/frontend-delivery-overview.png)
 
 ## Implementation steps
 

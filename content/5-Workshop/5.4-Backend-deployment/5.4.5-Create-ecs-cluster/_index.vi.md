@@ -52,7 +52,7 @@ Chụp CloudWatch Log Group sau khi tạo.
 Che Account ID và ARN nếu xuất hiện.
 -->
 
-![CloudWatch Log Group](/images/5-Workshop/5.4-Backend-deployment/cloudwatch-log-group.png)
+![CloudWatch Log Group](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/container-logs.jpg)
 
 CloudWatch Log Group này sẽ được sử dụng ở bước cấu hình Task Definition thông qua log driver `awslogs`, giúp ghi nhận toàn bộ log của ứng dụng NestJS trong quá trình vận hành.
 
@@ -88,7 +88,7 @@ Chụp image field đã che Account ID, port mapping 3000 và awslogs. Không hi
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Container configuration](/images/5-Workshop/5.4-Backend-deployment/container-configuration.jpg)
+![Container configuration](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/container-configuration.jpg)
 
 Environment variables không nhạy cảm có thể khai báo trực tiếp trong Task Definition.
 
@@ -99,7 +99,7 @@ Chụp Task Definition family/revision, execution role, task role, CPU/memory v�
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![ECS Task Definition](/images/5-Workshop/5.4-Backend-deployment/create-ecs-task-definition.png)
+![ECS Task Definition](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecs-task-definition.png)
 
 ## Kiểm tra kết quả
 

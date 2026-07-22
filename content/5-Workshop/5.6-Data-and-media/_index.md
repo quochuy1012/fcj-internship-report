@@ -24,7 +24,7 @@ Draw MongoDB Atlas outside the VPC, the NAT EIP in the Atlas Access List, and S3
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Data and media overview](/images/5-Workshop/5.6-Data-and-media/data-and-media-overview.png)
+![Data and media overview](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/data-and-media-overview.jpg)
 
 ## Implementation steps
 

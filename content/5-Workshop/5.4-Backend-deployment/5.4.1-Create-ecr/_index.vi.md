@@ -24,7 +24,7 @@ Tạo private repository lưu Docker image backend BravelSport.
 
 
 
-![ECR repository](/images/5-Workshop/5.4-Backend-deployment/create-ecr.png)
+![ECR repository](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecr.png)
 
 ## Kiểm tra kết quả
 

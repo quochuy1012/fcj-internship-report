@@ -89,7 +89,7 @@ The screenshot should show:
 Mask the Account ID and ARN if displayed.
 -->
 
-![ECS Service](/images/5-Workshop/5.4-Backend-deployment/create-ecs-service.png)
+![ECS Service](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecs-service.png)
 
 <!-- INSERT IMAGE HERE:
 Capture the Service details page.
@@ -104,7 +104,7 @@ The screenshot should show:
 Mask the Task ID, Account ID, and ARN if necessary.
 -->
 
-![ECS Service Overview](/images/5-Workshop/5.4-Backend-deployment/ecs-service-overview.png)
+![ECS Service Overview](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecs-service.png)
 
 ## Verification
 
@@ -124,7 +124,7 @@ Capture the service configuration showing the VPC, private subnets, public IP di
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Create the ECS Service](/images/5-Workshop/5.4-Backend-deployment/create-ecs-service.png)
+![Create the ECS Service](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecs-service.png)
 
 ### Check the task
 
@@ -135,7 +135,7 @@ Capture the Running task. Mask the task ARN, private IP, and Account ID.
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![ECS Task Running](/images/5-Workshop/5.4-Backend-deployment/ecs-task-running.jpg)
+![ECS Task Running](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/ecs-task-running.jpg)
 
 ### Check the Target Group
 
@@ -146,7 +146,7 @@ Capture the Healthy target status. Mask the target private IP and resource ID.
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Healthy ECS target](/images/5-Workshop/5.4-Backend-deployment/ecs-target-healthy.png)
+![Healthy ECS target](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/ecs-target-healthy.png)
 
 ### Check the logs
 
@@ -157,7 +157,7 @@ Capture the task log stream. Mask user data, JWTs, email addresses, payment payl
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Container logs](/images/5-Workshop/5.4-Backend-deployment/container-logs.jpg)
+![Container logs](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/container-logs.jpg)
 
 ## Verification
 

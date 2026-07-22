@@ -33,7 +33,7 @@ Distribute the ALB and NAT Gateway, as well as ECS Fargate, across two Availabil
 
 
 
-![Subnet list](/images/5-Workshop/5.3-Network-infrastructure/create-subnets.png)
+![Subnet list](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/create-subnets.png)
 
 ## Verification
 

@@ -52,7 +52,7 @@ The screenshot should show:
 Mask the Account ID and ARN if displayed.
 -->
 
-![CloudWatch Log Group](/images/5-Workshop/5.4-Backend-deployment/cloudwatch-log-group.png)
+![CloudWatch Log Group](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/container-logs.jpg)
 
 This CloudWatch Log Group will be referenced by the Task Definition through the `awslogs` log driver, allowing all NestJS application logs to be recorded during operation.
 
@@ -88,7 +88,7 @@ Capture the image field with the Account ID masked, port mapping 3000, and awslo
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Container configuration](/images/5-Workshop/5.4-Backend-deployment/container-configuration.jpg)
+![Container configuration](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/container-configuration.jpg)
 
 Non-sensitive environment variables can be declared directly in the Task Definition.
 
@@ -99,7 +99,7 @@ Capture the Task Definition family/revision, execution role, task role, CPU/memo
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![ECS Task Definition](/images/5-Workshop/5.4-Backend-deployment/create-ecs-task-definition.png)
+![ECS Task Definition](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-ecs-task-definition.png)
 
 ## Verification
 

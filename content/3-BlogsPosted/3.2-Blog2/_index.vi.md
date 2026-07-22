@@ -16,7 +16,7 @@ Một hướng phù hợp là: **AWS Transfer Family Web Apps** kết hợp **IA
 
 ## Kiến trúc tổng quan
 
-![Kiến trúc AWS Transfer Family Web Apps](/images/3-BlogsPosted/blog2.png)
+![Kiến trúc AWS Transfer Family Web Apps](/fcj-internship-report/images/3-BlogsPosted/blog2.png)
 
 > Nguồn bài: [AWS Study Group — Facebook](https://www.facebook.com/photo/?fbid=1533670831545926)
 

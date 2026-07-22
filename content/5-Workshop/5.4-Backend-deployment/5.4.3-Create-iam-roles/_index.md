@@ -65,9 +65,9 @@ Capture the list or detail pages for both roles. Mask full ARNs and the Account 
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Create ECS IAM roles - step 1](/images/5-Workshop/5.4-Backend-deployment/create-iam-roles1.png)
+![Create ECS IAM roles - step 1](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-iam-roles1.png)
 
-![Create ECS IAM roles - step 2](/images/5-Workshop/5.4-Backend-deployment/create-iam-roles2.png)
+![Create ECS IAM roles - step 2](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-iam-roles2.png)
 
 ## Verification
 

@@ -21,7 +21,7 @@ Build the backend on EC2, store the image in ECR, configure IAM and CloudWatch, 
 6. [5.4.6. Create an ECS Service](./5.4.6-Create-ecs-service/)
 
 
-![Backend deployment overview](/images/5-Workshop/5.4-Backend-deployment/backend-deployment-overview.png)
+![Backend deployment overview](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/backend-deployment-overview.png)
 
 ## Principles
 

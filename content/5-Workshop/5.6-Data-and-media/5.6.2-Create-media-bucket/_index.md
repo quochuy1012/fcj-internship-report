@@ -41,7 +41,7 @@ The screenshot should show:
 Mask the Account ID if displayed.
 -->
 
-![Create the S3 media bucket](/images/5-Workshop/5.6-Data-and-media/create-media-bucket.jpg)
+![Create the S3 media bucket](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/create-media-bucket.jpg)
 
 ### 2. Grant S3 access
 
@@ -75,7 +75,7 @@ Capture the policy showing the exact bucket and prefix. Mask the ARN and Account
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Media Task Role policy](/images/5-Workshop/5.6-Data-and-media/media-task-role-policy.jpg)
+![Media Task Role policy](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/media-task-role-policy.jpg)
 
 ### 4. Deploy a new revision
 
@@ -97,7 +97,7 @@ Capture the object in S3 and the image displayed on BravelSport. Mask user names
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Verify media upload](/images/5-Workshop/5.6-Data-and-media/verify-media-upload.jpg)
+![Verify media upload](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/verify-media-upload.jpg)
 
 ## Verification
 

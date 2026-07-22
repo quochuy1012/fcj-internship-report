@@ -10,7 +10,7 @@ pre: " <b> 4.1. </b> "
 <p class="event-eyebrow">Event report</p>
 <p class="event-lead">Report after Community Day at Bitexco — learning AWS/AI and connecting with the FCAJ community.</p>
 
-<figure class="event-poster"><img src="/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
+<figure class="event-poster"><img src="/fcj-internship-report/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
 
 <div class="event-info-grid">
 <div><span>When</span><strong>09:00 – 12:00 (GMT+7)<br>Saturday, 23/05/2026</strong></div>

@@ -57,7 +57,7 @@ Without a clear architecture, BravelSport risks:
 
 Three zones: **Edge & Frontend**, **VPC & Backend**, **Supporting services & storage**.
 
-![BravelSport AWS Architecture](/images/2-Proposal/bravelsport_aws_architecture.png)
+![BravelSport AWS Architecture](/fcj-internship-report/images/2-Proposal/bravelsport_aws_architecture.png)
 
 #### 4.1 Edge & Frontend
 

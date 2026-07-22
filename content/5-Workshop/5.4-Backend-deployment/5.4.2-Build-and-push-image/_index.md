@@ -65,7 +65,7 @@ Capture the completed docker build and docker push output. Mask the Account ID, 
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-![Build and push the backend image](/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
+![Build and push the backend image](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
 
 ## Verification
 
@@ -85,7 +85,7 @@ Current image information:
 | Health check path | `/` |
 
 
-![Docker image in Amazon ECR](/images/5-Workshop/5.4-Backend-deployment/ecr-backend-image.png)
+![Docker image in Amazon ECR](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/build-and-push-image.png)
 ## Common issues
 
 | Issue | Resolution |

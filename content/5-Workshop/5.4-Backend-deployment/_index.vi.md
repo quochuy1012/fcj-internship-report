@@ -21,7 +21,7 @@ Build backend trên EC2, lưu image trong ECR, cấu hình IAM và CloudWatch, s
 6. [5.4.6. Tạo ECS Service](./5.4.6-Create-ecs-service/)
 
 
-![Backend deployment overview](/images/5-Workshop/5.4-Backend-deployment/backend-deployment-overview.png)
+![Backend deployment overview](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/backend-deployment-overview.png)
 
 ## Nguyên tắc
 

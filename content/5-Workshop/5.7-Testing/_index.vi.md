@@ -180,7 +180,7 @@ Che:
 - Dữ liệu người dùng nhạy cảm
 -->
 
-![Kiểm thử end-to-end trên trình duyệt](/images/5-Workshop/5.7-Testing/end-to-end-browser-test.jpg)
+![Kiểm thử end-to-end trên trình duyệt](/fcj-internship-report/images/5-Workshop/5.7-Testing/end-to-end-browser-test.jpg)
 
 ```text
 https://bravelsport.com/admin
@@ -340,7 +340,7 @@ Che:
 - Task ID nếu không cần thiết
 -->
 
-![CloudWatch Logs trong quá trình kiểm thử](/images/5-Workshop/5.7-Testing/cloudwatch-test-logs.jpg)
+![CloudWatch Logs trong quá trình kiểm thử](/fcj-internship-report/images/5-Workshop/5.7-Testing/cloudwatch-test-logs.jpg)
 
 
 ## Ma trận kết quả

@@ -31,7 +31,7 @@ The solution integrates CAMARA-standard Network APIs (Vonage / Ericsson) into th
 
 Vonage checks are injected into the **Amazon Cognito** flow through **Lambda Triggers**.
 
-![Risk-Adaptive Customer Sign-In architecture](/images/3-BlogsPosted/blog1.png)
+![Risk-Adaptive Customer Sign-In architecture](/fcj-internship-report/images/3-BlogsPosted/blog1.png)
 
 > Source: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2198070834291210/)
 

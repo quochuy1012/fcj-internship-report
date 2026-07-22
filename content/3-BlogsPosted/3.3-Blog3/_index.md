@@ -14,7 +14,7 @@ For realtime apps (order alerts, live dashboards, delivery status, chat, pub/sub
 
 ## New architecture
 
-![AWS AppSync Event API architecture](/images/3-BlogsPosted/blog3.png)
+![AWS AppSync Event API architecture](/fcj-internship-report/images/3-BlogsPosted/blog3.png)
 
 > Source: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2206455833452710/)
 

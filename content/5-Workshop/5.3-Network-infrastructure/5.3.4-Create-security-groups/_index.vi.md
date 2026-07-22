@@ -168,7 +168,7 @@ Che:
 - Public IP quản trị
 -->
 
-![Security Group BravelSport](/images/5-Workshop/5.3-Network-infrastructure/create-security-groups.png)
+![Security Group BravelSport](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/create-security-groups.png)
 
 ## Kiểm tra kết quả
 

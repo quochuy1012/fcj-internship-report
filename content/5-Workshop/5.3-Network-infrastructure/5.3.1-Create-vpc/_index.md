@@ -23,7 +23,7 @@ Create a private network boundary for the ALB, NAT Gateway, and ECS Fargate.
 7. Enable **DNS resolution** and **DNS hostnames**.
 
 
-![Create the BravelSport VPC](/images/5-Workshop/5.3-Network-infrastructure/create-vpc.png)
+![Create the BravelSport VPC](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/create-vpc.png)
 
 ## Verification
 

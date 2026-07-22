@@ -49,7 +49,7 @@ Requirements:
 - Prefer Systems Manager Session Manager when the account and AMI have been configured appropriately.
 
 
-![Running EC2 Build Machine](/images/5-Workshop/5.2-Prerequisite/ec2-running.jpg)
+![Running EC2 Build Machine](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/ec2-running.jpg)
 
 ### 4. Install tools
 
@@ -68,7 +68,7 @@ git --version
 
 Install the Node.js version required by `package.json` and confirm that the Docker daemon is running.
 
-![Verify local tools](/images/5-Workshop/5.2-Prerequisite/verify-local-tools.jpg)
+![Verify local tools](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/verify-local-tools.jpg)
 
 ### 5. Clone the source code
 
@@ -100,7 +100,7 @@ Capture the terminal after npm run build completes and show the file list in dis
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-<!-- Image not yet available under static: /images/5-Workshop/5.2-Prerequisite/frontend-build-success.png -->
+<!-- Image not yet available under static: /fcj-internship-report/images/5-Workshop/5.2-Prerequisite/frontend-build-success.png -->
 
 ### 7. Test the backend Docker image build
 
@@ -129,7 +129,7 @@ curl -i http://localhost:3000/
 The initial health endpoint is `/`. If the application returns a status code other than `200`, confirm the actual route before creating the Target Group.
 
 
-![Successful Docker image build](/images/5-Workshop/5.2-Prerequisite/backend-docker-build-success.jpg)
+![Successful Docker image build](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/backend-docker-build-success.jpg)
 
 ### 8. Prepare MongoDB Atlas
 
@@ -141,20 +141,20 @@ The initial health endpoint is `/`. If the application returns a status code oth
 
 
 
-![MongoDB Atlas Network Access](/images/5-Workshop/5.2-Prerequisite/mongodb-network-access.jpg)
+![MongoDB Atlas Network Access](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/mongodb-network-access.jpg)
 
 ### 9. Prepare the Route 53 Hosted Zone
 
 Confirm the Hosted Zone for the `bravelsport.com` domain. Do not modify records currently serving production until a migration plan is available.
 
 
-![Route 53 Hosted Zone](/images/5-Workshop/5.2-Prerequisite/route53-hosted-zone.jpg)
+![Route 53 Hosted Zone](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/route53-hosted-zone.jpg)
 
 ### 10. Prepare the ACM certificate
 
 In the `us-east-1` Region, request a certificate for the hostname used with CloudFront. Complete DNS validation and wait until its status becomes `Issued`.
 
-![ACM certificate Issued](/images/5-Workshop/5.2-Prerequisite/acm-certificate-issued.jpg)
+![ACM certificate Issued](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/acm-certificate-issued.jpg)
 
 
 ## Verification

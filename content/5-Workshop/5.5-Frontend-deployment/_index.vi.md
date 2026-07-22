@@ -26,7 +26,7 @@ Vẽ Route 53 → CloudFront/WAF với S3 origin và ALB origin. Ghi rõ behavio
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Frontend delivery overview](/images/5-Workshop/5.5-Frontend-deployment/frontend-delivery-overview.png)
+![Frontend delivery overview](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/frontend-delivery-overview.png)
 
 ## Các bước thực hiện
 

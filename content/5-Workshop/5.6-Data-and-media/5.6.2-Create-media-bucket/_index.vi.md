@@ -41,7 +41,7 @@ Chụp danh sách bucket hoặc trang bucket bravel-uploads.
 Che Account ID nếu xuất hiện.
 -->
 
-![Create S3 media bucket](/images/5-Workshop/5.6-Data-and-media/create-media-bucket.jpg)
+![Create S3 media bucket](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/create-media-bucket.jpg)
 
 ### 2. Cấp quyền truy cập S3
 
@@ -75,7 +75,7 @@ Chụp policy chỉ định đúng bucket/prefix. Che ARN/Account ID và không 
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Media Task Role policy](/images/5-Workshop/5.6-Data-and-media/media-task-role-policy.jpg)
+![Media Task Role policy](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/media-task-role-policy.jpg)
 
 ### 4. Triển khai revision mới
 
@@ -97,7 +97,7 @@ Chụp object trong S3 và ảnh hiển thị trên BravelSport. Che tên ngư�
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Verify media upload](/images/5-Workshop/5.6-Data-and-media/verify-media-upload.jpg)
+![Verify media upload](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/verify-media-upload.jpg)
 
 ## Kiểm tra kết quả
 

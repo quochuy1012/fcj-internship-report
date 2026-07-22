@@ -39,7 +39,7 @@ The screenshot should show:
 Mask the Account ID if displayed.
 -->
 
-![Create the S3 Frontend Bucket - step 1](/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend1.png)
+![Create the S3 Frontend Bucket - step 1](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend1.png)
 
 6. Upload all contents of the `dist/` directory to the bucket:
 
@@ -64,7 +64,7 @@ The screenshot should show:
 Mask the Account ID if displayed.
 -->
 
-![Create the S3 Frontend Bucket - step 2](/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend2.png)
+![Create the S3 Frontend Bucket - step 2](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend2.png)
 
 7. Configure Cache-Control for objects in the bucket:
 

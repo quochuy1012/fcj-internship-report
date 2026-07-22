@@ -81,7 +81,7 @@ Che:
 - Connection String
 -->
 
-![MongoDB Atlas IP Access List](/images/5-Workshop/5.6-Data-and-media/configure-mongodb-atlas.jpg)
+![MongoDB Atlas IP Access List](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/configure-mongodb-atlas.jpg)
 
 
 

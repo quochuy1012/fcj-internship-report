@@ -16,7 +16,7 @@ A strong option is **AWS Transfer Family Web Apps** with **IAM Identity Center**
 
 ## Architecture overview
 
-![AWS Transfer Family Web Apps architecture](/images/3-BlogsPosted/blog2.png)
+![AWS Transfer Family Web Apps architecture](/fcj-internship-report/images/3-BlogsPosted/blog2.png)
 
 > Source: [AWS Study Group — Facebook](https://www.facebook.com/photo/?fbid=1533670831545926)
 

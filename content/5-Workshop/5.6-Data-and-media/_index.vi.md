@@ -24,7 +24,7 @@ Vẽ MongoDB Atlas ngoài VPC, NAT EIP trong Atlas Access List và S3 Media truy
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-![Data and media overview](/images/5-Workshop/5.6-Data-and-media/data-and-media-overview.png)
+![Data and media overview](/fcj-internship-report/images/5-Workshop/5.6-Data-and-media/data-and-media-overview.jpg)
 
 ## Các bước thực hiện
 

@@ -10,7 +10,7 @@ pre: " <b> 4.1. </b> "
 <p class="event-eyebrow">Báo cáo sự kiện</p>
 <p class="event-lead">Bài thu hoạch sau buổi Community Day tại Bitexco — học AWS/AI và kết nối cộng đồng FCAJ.</p>
 
-<figure class="event-poster"><img src="/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
+<figure class="event-poster"><img src="/fcj-internship-report/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day"></figure>
 
 <div class="event-info-grid">
 <div><span>Thời gian</span><strong>09:00 – 12:00 (GMT+7)<br>Thứ Bảy, 23/05/2026</strong></div>

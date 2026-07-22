@@ -23,7 +23,7 @@ Tạo ranh giới mạng riêng cho ALB, NAT Gateway và ECS Fargate.
 7. Bật **DNS resolution** và **DNS hostnames**.
 
 
-![Tạo VPC BravelSport](/images/5-Workshop/5.3-Network-infrastructure/create-vpc.png)
+![Tạo VPC BravelSport](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/create-vpc.png)
 
 ## Kiểm tra kết quả
 

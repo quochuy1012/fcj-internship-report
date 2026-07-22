@@ -60,7 +60,7 @@ The screenshot should show the HTTPS 443 Listener and Security Group.
 Mask the DNS Name, ARN, Account ID, and Certificate ARN before adding it to the report.
 -->
 
-![Create the Application Load Balancer - step 1](/images/5-Workshop/5.4-Backend-deployment/create-alb1.png)
+![Create the Application Load Balancer - step 1](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-alb1.png)
 
 <!-- INSERT IMAGE HERE:
 Capture the IP-type Target Group.
@@ -68,7 +68,7 @@ The screenshot should show port 3000, Health Check Path "/", and Target Type IP.
 Mask the ARN and Account ID if displayed.
 -->
 
-![Create the Target Group - step 2](/images/5-Workshop/5.4-Backend-deployment/create-alb2.png)
+![Create the Target Group - step 2](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-alb2.png)
 
 ## Verification
 

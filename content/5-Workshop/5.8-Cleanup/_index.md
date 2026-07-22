@@ -51,13 +51,13 @@ Capture the NAT Gateway in the Deleting or Deleted state. Mask the NAT ID and El
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-<!-- Image not yet available under static: /images/5-Workshop/5.8-Cleanup/delete-nat-gateway.png -->
+<!-- Image not yet available under static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/delete-nat-gateway.png -->
 <!-- INSERT IMAGE HERE:
 Capture the EC2 Build Machine in the Terminated state. Mask the Instance ID and IP address.
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-<!-- Image not yet available under static: /images/5-Workshop/5.8-Cleanup/ec2-terminated.png -->
+<!-- Image not yet available under static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/ec2-terminated.png -->
 
 ## Verification
 
@@ -75,7 +75,7 @@ Capture the VPC resource map or Resource Explorer showing that workshop resource
 Information to mask: Account ID, ARN, public IP address, token, cookie, secret, and user data if displayed.
 -->
 
-<!-- Image not yet available under static: /images/5-Workshop/5.8-Cleanup/verify-cleanup.png -->
+<!-- Image not yet available under static: /fcj-internship-report/images/5-Workshop/5.8-Cleanup/verify-cleanup.png -->
 
 ## Common issues
 

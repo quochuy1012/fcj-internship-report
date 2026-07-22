@@ -49,7 +49,7 @@ Yêu cầu:
 - Ưu tiên Systems Manager Session Manager nếu tài khoản và AMI đã cấu hình phù hợp.
 
 
-![EC2 Build Machine đang chạy](/images/5-Workshop/5.2-Prerequisite/ec2-running.jpg)
+![EC2 Build Machine đang chạy](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/ec2-running.jpg)
 
 ### 4. Cài đặt công cụ
 
@@ -68,7 +68,7 @@ git --version
 
 Cài phiên bản Node.js phù hợp với `package.json` và xác nhận Docker daemon đang hoạt động. 
 
-![Verify local tools](/images/5-Workshop/5.2-Prerequisite/verify-local-tools.jpg)
+![Verify local tools](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/verify-local-tools.jpg)
 
 ### 5. Clone mã nguồn
 
@@ -100,7 +100,7 @@ Chụp terminal kết thúc npm run build và danh sách file trong dist. Che UR
 Thông tin cần che: Account ID, ARN, địa chỉ IP công khai, token, cookie, secret và dữ liệu người dùng nếu xuất hiện.
 -->
 
-<!-- Ảnh chưa có trong static: /images/5-Workshop/5.2-Prerequisite/frontend-build-success.png -->
+<!-- Ảnh chưa có trong static: /fcj-internship-report/images/5-Workshop/5.2-Prerequisite/frontend-build-success.png -->
 
 ### 7. Build thử Docker image backend
 
@@ -129,7 +129,7 @@ curl -i http://localhost:3000/
 Health endpoint ban đầu là `/`. Nếu ứng dụng trả mã khác `200`, phải xác nhận route thật trước khi tạo Target Group.
 
 
-![Docker image build thành công](/images/5-Workshop/5.2-Prerequisite/backend-docker-build-success.jpg)
+![Docker image build thành công](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/backend-docker-build-success.jpg)
 
 ### 8. Chuẩn bị MongoDB Atlas
 
@@ -141,20 +141,20 @@ Health endpoint ban đầu là `/`. Nếu ứng dụng trả mã khác `200`, ph
 
 
 
-![MongoDB Atlas Network Access](/images/5-Workshop/5.2-Prerequisite/mongodb-network-access.jpg)
+![MongoDB Atlas Network Access](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/mongodb-network-access.jpg)
 
 ### 9. Chuẩn bị Route 53 Hosted Zone
 
 Xác nhận Hosted Zone cho domain `bravelsport.com`. Không thay đổi record đang phục vụ production khi chưa có kế hoạch chuyển đổi.
 
 
-![Route 53 Hosted Zone](/images/5-Workshop/5.2-Prerequisite/route53-hosted-zone.jpg)
+![Route 53 Hosted Zone](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/route53-hosted-zone.jpg)
 
 ### 10. Chuẩn bị ACM certificate
 
 Trong Region `us-east-1`, request certificate cho hostname dùng với CloudFront. Hoàn tất DNS validation và chờ trạng thái `Issued`.
 
-![ACM certificate Issued](/images/5-Workshop/5.2-Prerequisite/acm-certificate-issued.jpg)
+![ACM certificate Issued](/fcj-internship-report/images/5-Workshop/5.2-Prerequisite/acm-certificate-issued.jpg)
 
 
 ## Kiểm tra kết quả

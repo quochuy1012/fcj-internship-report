@@ -96,7 +96,7 @@ Che Distribution Domain Name, Account ID và các giá trị không cần thiế
 
 -->
 
-![Configure Route 53 alias](/images/5-Workshop/5.5-Frontend-deployment/configure-route53.png)
+![Configure Route 53 alias](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/configure-route53.png)
 
 ## Kiểm tra kết quả
 

@@ -38,7 +38,7 @@ Private Route Table → NAT Gateway → Internet Gateway → MongoDB Atlas/publi
 
 
 
-![VPC resource map](/images/5-Workshop/5.3-Network-infrastructure/vpc-resource-map.png)
+![VPC resource map](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/vpc-resource-map.png)
 
 ## Các bước thực hiện
 

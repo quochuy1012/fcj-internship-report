@@ -31,7 +31,7 @@ Giải pháp tích hợp Network APIs theo chuẩn **CAMARA** (Vonage / Ericsson
 
 Logic kiểm tra của Vonage được đưa vào luồng **Amazon Cognito** qua **Lambda Triggers**.
 
-![Kiến trúc Risk-Adaptive Customer Sign-In](/images/3-BlogsPosted/blog1.png)
+![Kiến trúc Risk-Adaptive Customer Sign-In](/fcj-internship-report/images/3-BlogsPosted/blog1.png)
 
 > Nguồn bài: [AWS Study Group — Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2198070834291210/)
 

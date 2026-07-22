@@ -60,7 +60,7 @@ Chụp Application Load Balancer ở trạng thái Active.
 Che DNS Name, ARN, Account ID và Certificate ARN trước khi đưa vào báo cáo.
 -->
 
-![Tạo Application Load Balancer - bước 1](/images/5-Workshop/5.4-Backend-deployment/create-alb1.png)
+![Tạo Application Load Balancer - bước 1](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-alb1.png)
 
 <!-- CHÈN ẢNH TẠI ĐÂY:
 Chụp Target Group loại IP.
@@ -68,7 +68,7 @@ Chụp Target Group loại IP.
 Che ARN và Account ID nếu xuất hiện.
 -->
 
-![Tạo Target Group - bước 2](/images/5-Workshop/5.4-Backend-deployment/create-alb2.png)
+![Tạo Target Group - bước 2](/fcj-internship-report/images/5-Workshop/5.4-Backend-deployment/create-alb2.png)
 
 ## Kiểm tra kết quả
 

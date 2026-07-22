@@ -33,7 +33,7 @@ Phân bố ALB/NAT Gateway và ECS Fargate trên hai Availability Zone.
 
 
 
-![Danh sách subnet](/images/5-Workshop/5.3-Network-infrastructure/create-subnets.png)
+![Danh sách subnet](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/create-subnets.png)
 
 ## Kiểm tra kết quả
 

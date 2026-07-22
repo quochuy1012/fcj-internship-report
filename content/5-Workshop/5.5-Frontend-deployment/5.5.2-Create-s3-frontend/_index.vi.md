@@ -39,7 +39,7 @@ Chụp tab Permissions của bucket.
 Che Account ID nếu xuất hiện.
 -->
 
-![Tạo S3 Frontend Bucket - bước 1](/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend1.png)
+![Tạo S3 Frontend Bucket - bước 1](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend1.png)
 
 6. Upload toàn bộ nội dung thư mục `dist/` lên bucket:
 
@@ -64,7 +64,7 @@ Chụp tab Objects của bucket.
 Che Account ID nếu xuất hiện.
 -->
 
-![Tạo S3 Frontend Bucket - bước 2](/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend2.png)
+![Tạo S3 Frontend Bucket - bước 2](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/create-s3-frontend2.png)
 
 7. Cấu hình Cache-Control cho các đối tượng trong bucket:
 

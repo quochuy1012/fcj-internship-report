@@ -24,7 +24,7 @@ This workshop describes the **target architecture and hands-on deployment proces
 - An EC2 Ubuntu instance is only a build/deploy machine — not production ingress.
 - S3 Media is a workshop extension (current code also supports Cloudinary / local `/uploads`).
 
-![BravelSport AWS Architecture](/images/5-Workshop/architecture/bravelsport-aws-architecture.png)
+![BravelSport AWS Architecture](/fcj-internship-report/images/5-Workshop/architecture/bravelsport-aws-architecture.png)
 
 ## Workshop contents
 
@@ -44,7 +44,7 @@ Do not include access keys, secrets, MongoDB connection strings, JWT secrets, au
 ## Verification
 
 - Hugo menu shows sections 5.1–5.8 in order.
-- Every image path starts with `/images/5-Workshop/`.
+- Every image path starts with `/fcj-internship-report/images/5-Workshop/`.
 - Pages clearly separate the EC2 Build Machine from the ECS Fargate runtime.
 
 ## Common issues
@@ -52,7 +52,7 @@ Do not include access keys, secrets, MongoDB connection strings, JWT secrets, au
 | Issue | Cause | Resolution |
 |---|---|---|
 | Wrong menu order | Bad `weight` / `pre` | Fix front matter |
-| Images missing | Wrong `static/` path | Match `/images/5-Workshop/...` |
+| Images missing | Wrong `static/` path | Match `/fcj-internship-report/images/5-Workshop/...` |
 | Broken child links | Renamed folders | Check relative links |
 
 ## Summary

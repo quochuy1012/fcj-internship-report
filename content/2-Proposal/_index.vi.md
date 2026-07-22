@@ -83,7 +83,7 @@ Kiến trúc BravelSport gồm ba khu vực chính:
 2. VPC và Backend.
 3. Dịch vụ hỗ trợ và lưu trữ dữ liệu.
 
-![Kiến trúc AWS BravelSport](/images/2-Proposal/bravelsport_aws_architecture.png)
+![Kiến trúc AWS BravelSport](/fcj-internship-report/images/2-Proposal/bravelsport_aws_architecture.png)
 
 #### 4.1. Edge và Frontend
 

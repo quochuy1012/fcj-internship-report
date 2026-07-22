@@ -96,7 +96,7 @@ Mask the Distribution Domain Name, Account ID, and unnecessary values.
 
 -->
 
-![Configure the Route 53 alias](/images/5-Workshop/5.5-Frontend-deployment/configure-route53.png)
+![Configure the Route 53 alias](/fcj-internship-report/images/5-Workshop/5.5-Frontend-deployment/configure-route53.png)
 
 ## Verification
 

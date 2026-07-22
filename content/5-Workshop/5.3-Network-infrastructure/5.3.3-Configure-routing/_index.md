@@ -38,11 +38,11 @@ Allow Public Subnets to connect to the Internet and provide outbound access for 
 3. Associate it with both Private Subnets.
 
 
-![Routing configuration - step 1](/images/5-Workshop/5.3-Network-infrastructure/configure-routing1.png)
+![Routing configuration - step 1](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/configure-routing1.png)
 
-![Routing configuration - step 2](/images/5-Workshop/5.3-Network-infrastructure/configure-routing2.png)
+![Routing configuration - step 2](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/configure-routing2.png)
 
-![Routing configuration - step 3](/images/5-Workshop/5.3-Network-infrastructure/configure-routing3.png)
+![Routing configuration - step 3](/fcj-internship-report/images/5-Workshop/5.3-Network-infrastructure/configure-routing3.png)
 
 ### Notes
 

@@ -11,7 +11,7 @@ pre: " <b> 4. </b> "
   <p class="event-lead">Trong kỳ thực tập FCAJ, tôi tham gia sự kiện cộng đồng để học AWS/AI và kết nối với cộng đồng.</p>
 
   <a class="event-card" href="4.1-Event1/">
-    <img class="event-card-thumb" src="/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day">
+    <img class="event-card-thumb" src="/fcj-internship-report/images/4-EventParticipated/fcaj-community-day.png" alt="FCAJ Community Day">
     <div class="event-card-body">
       <span class="event-pill">Event 01</span>
       <h2>FCAJ Community Day</h2>
