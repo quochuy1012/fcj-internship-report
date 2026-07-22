@@ -34,11 +34,11 @@ chapter: false
 ## Nội dung báo cáo
 
 <div class="report-nav">
-  <a class="report-link" href="1-worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Nhật ký công việc</span></a>
-  <a class="report-link" href="2-proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Bản đề xuất</span></a>
-  <a class="report-link" href="3-blogsposted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các bài blogs đã đăng</span></a>
-  <a class="report-link" href="4-eventparticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các events đã tham gia</span></a>
-  <a class="report-link" href="5-workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
-  <a class="report-link" href="6-self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Tự đánh giá</span></a>
-  <a class="report-link" href="7-feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Chia sẻ, đóng góp ý kiến</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/1-worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Nhật ký công việc</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/2-proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Bản đề xuất</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/3-blogsposted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các bài blogs đã đăng</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/4-eventparticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Các events đã tham gia</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/5-workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/6-self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Tự đánh giá</span></a>
+  <a class="report-link" href="/fcj-internship-report/vi/7-feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Chia sẻ, đóng góp ý kiến</span></a>
 </div>

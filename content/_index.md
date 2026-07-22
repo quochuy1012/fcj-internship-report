@@ -34,11 +34,11 @@ chapter: false
 ## Report Content
 
 <div class="report-nav">
-  <a class="report-link" href="1-worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Worklog</span></a>
-  <a class="report-link" href="2-proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Proposal</span></a>
-  <a class="report-link" href="3-blogsposted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Blogs Posted</span></a>
-  <a class="report-link" href="4-eventparticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Events Participated</span></a>
-  <a class="report-link" href="5-workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
-  <a class="report-link" href="6-self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Self-evaluation</span></a>
-  <a class="report-link" href="7-feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Sharing and Feedback</span></a>
+  <a class="report-link" href="/fcj-internship-report/1-worklog/"><span class="report-num">01</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Worklog</span></a>
+  <a class="report-link" href="/fcj-internship-report/2-proposal/"><span class="report-num">02</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Proposal</span></a>
+  <a class="report-link" href="/fcj-internship-report/3-blogsposted/"><span class="report-num">03</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Blogs Posted</span></a>
+  <a class="report-link" href="/fcj-internship-report/4-eventparticipated/"><span class="report-num">04</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Events Participated</span></a>
+  <a class="report-link" href="/fcj-internship-report/5-workshop/"><span class="report-num">05</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Workshop</span></a>
+  <a class="report-link" href="/fcj-internship-report/6-self-evaluation/"><span class="report-num">06</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Self-evaluation</span></a>
+  <a class="report-link" href="/fcj-internship-report/7-feedback/"><span class="report-num">07</span><span class="report-spacer" aria-hidden="true"></span><span class="report-label">Sharing and Feedback</span></a>
 </div>
