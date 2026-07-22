@@ -14,10 +14,10 @@ My internship in **First Cloud AI Journey** at **AWS Viet Nam** (15/05/2026 – 
 At first I was unsure who to ask and when. After a few weeks it got easier: people in the group usually replied, and the materials were enough to start on my own. Overall it felt comfortable — nobody was watching every click. What I still missed was time to get to know people beyond tech talk. Some weeks I wanted a quick answer on an ECS error but hesitated because I barely knew anyone in the group.
 
 **2. Support from Mentor / Team Admin**  
-Mentors did not do the work for me; they usually told me to try first, then pointed me in a direction. That felt slow at the beginning, but later I saw why it helped. In the **BravelSport** review, the mentor said my diagram was messy and I had not thought about Multi-AZ / outbound access to Atlas — it stung a bit, but it was fair. Admin support for schedules and paperwork was steady; I rarely had to chase anything twice.
+Mentors were supportive, but they did not do the work for me. When I got stuck, they usually asked what I had already tried, then suggested the next step — that helped me remember more than just getting the answer. In the **BravelSport** architecture review, the feedback was concrete: make the diagram clearer, think about availability, and handle how the backend reaches services outside the VPC. Team admin handled schedules and paperwork quickly, so I did not wait long for documents or confirmations.
 
 **3. Fit with my major**  
-I study IT at HUTECH, so networking and systems were not completely new. Cloud was the real jump: I used to know service names, and this term I finally had to wire them into something that runs. **BravelSport** (`bravelsport.com`) made CloudFront, ECS, ALB, and S3 feel tied to real shop and court-booking flows, not just slides.
+I study IT at HUTECH, so networking and systems basics still helped with AWS labs. The newest part for me was end-to-end cloud deployment: not learning each service alone, but connecting them in a real project. With **BravelSport**, I understood better that frontend, backend, storage, and monitoring have to work together for the system to run well.
 
 **4. Learning opportunities**  
 I learned the most not on the first lab attempt, but when I had to revise after feedback and sit down to write the proposal/workshop. Community Day also helped — hearing how others build products made cloud feel bigger than my own Console window. The hardest part for me is still explaining architecture clearly: I can build it, but I don’t always say it cleanly.
@@ -26,7 +26,7 @@ I learned the most not on the first lab attempt, but when I had to revise after 
 People in FCAJ were willing to share. I asked about deploy errors more than once and didn’t get ignored. Compared with learning alone on YouTube, it felt less lonely. Community Day was also the moment I felt part of a real community, not just someone doing homework alone.
 
 **6. Policies / benefits**  
-The path was fairly clear: worklog, proposal, event, workshop, then the report. That helped me know where to focus each week. When documentation deadlines stacked on top of labs, the flexible timing helped a lot — without it I would have been more lost.
+The program had a clear path from the start, so I usually knew which stage I was in and what I needed to submit. What I appreciated most was some schedule flexibility when labs and documentation piled up at the same time — that helped me finish the report without dropping the hands-on work.
 
 ### Additional Questions
 

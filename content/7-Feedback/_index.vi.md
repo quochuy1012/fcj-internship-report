@@ -14,19 +14,19 @@ Kỳ thực tập **First Cloud AI Journey** tại **AWS Viet Nam** (15/05/2026 
 Ban đầu tôi hơi e vì không biết hỏi ai, hỏi lúc nào cho hợp. Sau vài tuần thì quen hơn: group luôn có người trả lời, tài liệu cũng đủ để tự bắt đầu. Cảm giác chung là thoải mái, không bị “soi” từng bước. Điểm tôi vẫn thấy thiếu là ít buổi để quen mặt nhau ngoài chuyện kỹ thuật. Có tuần tôi muốn hỏi nhanh một lỗi ECS mà ngại vì chưa thân ai trong group.
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor không làm hộ; thường bảo tôi thử trước rồi mới chỉ hướng. Lúc đầu hơi sốt ruột, nhưng về sau tôi thấy cách này hợp. Lần review **BravelSport**, mentor nói diagram còn rối và chưa nghĩ tới Multi-AZ / outbound ra Atlas — nghe hơi “đắng” nhưng đúng. Admin thì lo lịch và giấy tờ ổn, gần như không phải nhắc hai lần.
+Mentor sẵn sàng hỗ trợ, nhưng không làm thay. Khi tôi kẹt, họ thường hỏi lại tôi đã thử gì rồi mới gợi ý bước tiếp theo — cách này giúp tôi nhớ lâu hơn là chỉ nhận đáp án. Lúc review kiến trúc **BravelSport**, góp ý khá cụ thể: diagram cần rõ hơn, nghĩ thêm tính sẵn sàng và phần kết nối backend ra ngoài VPC. Team admin hỗ trợ lịch học và thủ tục nhanh, tôi không phải chờ lâu khi cần giấy tờ hay xác nhận.
 
 **3. Sự phù hợp với chuyên ngành**  
-Học CNTT ở HUTECH nên phần mạng, hệ thống tôi không bị lạc quá. Cái mới là cloud: trước chỉ biết tên dịch vụ, kỳ này mới phải ghép chúng thành một hệ thống chạy được. Dự án **BravelSport** (`bravelsport.com`) giúp tôi thấy CloudFront, ECS, ALB, S3 không còn là slide nữa mà gắn với luồng bán hàng và đặt sân thật.
+Tôi học CNTT tại HUTECH, nên kiến thức mạng và hệ thống vẫn dùng được khi làm lab AWS. Phần mới nhất với tôi là triển khai cloud end-to-end: không chỉ học từng dịch vụ riêng lẻ mà phải gắn chúng vào một dự án thật. Với **BravelSport**, tôi hiểu hơn việc thiết kế frontend, backend, lưu trữ và giám sát phải đi cùng nhau thì hệ thống mới chạy ổn.
 
 **4. Cơ hội học hỏi**  
-Tôi học nhiều nhất không phải lúc làm lab lần đầu, mà lúc phải sửa lại sau góp ý và ngồi viết proposal/workshop. Community Day cũng mở mắt: nghe người khác kể cách họ làm sản phẩm, mình mới thấy cloud rộng hơn cái Console trên máy mình. Phần khó nhất với tôi vẫn là giải thích kiến trúc cho người khác nghe — làm được rồi nhưng nói chưa gọn.
+Tôi học nhiều nhất không phải lúc làm lab lần đầu, mà lúc phải sửa lại sau góp ý và ngồi viết proposal/workshop. Community Day cũng mở mắt: nghe người khác kể cách họ làm sản phẩm, tôi mới thấy cloud rộng hơn cái Console trên máy mình. Phần khó nhất với tôi vẫn là giải thích kiến trúc cho người khác nghe — làm được rồi nhưng nói chưa gọn.
 
 **5. Văn hóa & đồng đội**  
 Trong FCAJ mọi người khá sẵn sàng chia sẻ. Tôi hỏi mấy lần về lỗi deploy mà không bị “ngó lơ”. So với tự học trên YouTube thì đỡ cô đơn hơn nhiều. Community Day cũng là lúc tôi cảm thấy mình thuộc một cộng đồng thật, không chỉ là người làm bài một mình.
 
 **6. Chính sách / phúc lợi**  
-Lộ trình khá rõ: worklog, proposal, event, workshop rồi báo cáo. Nhờ vậy tôi biết tuần nào nên dồn sức vào đâu. Có lúc deadline tài liệu chồng lên lab thì được linh hoạt thời gian — nếu không có điểm này chắc tôi đã rối hơn.
+Chương trình có lộ trình rõ từ đầu nên tôi biết mình đang ở giai đoạn nào và cần nộp gì. Điều tôi đánh giá cao là khi lab và viết tài liệu bị dồn cùng lúc, lịch vẫn linh hoạt được một phần — nhờ vậy tôi kịp hoàn thành báo cáo mà không phải bỏ dở phần thực hành.
 
 ### Câu hỏi khác
 
