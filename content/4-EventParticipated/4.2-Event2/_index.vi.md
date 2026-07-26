@@ -13,7 +13,7 @@ pre: " <b> 4.2. </b> "
 <div class="event-info-grid">
 <div><span>Thời gian</span><strong>Check-in 08:30 – 09:00 · Check-out 16:00 – 17:00 (GMT+7)<br>Thứ Bảy, 25/07/2026</strong></div>
 <div><span>Địa điểm</span><strong>Văn phòng AWS<br>Tầng 26, TP. Hồ Chí Minh</strong></div>
-<div><span>Vai trò</span><strong>Người tham dự (Fulltime)</strong></div>
+<div><span>Vai trò</span><strong>Người tham dự</strong></div>
 <div><span>Tài liệu</span><strong><a href="https://drive.google.com/drive/folders/1goIcF8jRIGZczB4DBHGTsS6mp41FWmLL" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1goIcF8jRIGZczB4DBHGTsS6mp41FWmLL</a></strong></div>
 </div>
 
@@ -79,5 +79,5 @@ pre: " <b> 4.2. </b> "
 </ul>
 
 <h3>Trải nghiệm cá nhân</h3>
-<p>Ngày <strong>25/07/2026</strong> tôi đăng ký và được duyệt tham dự sự kiện tại văn phòng AWS (tầng 26). Buổi làm việc fulltime với khung điểm danh buổi sáng và chiều giúp tôi vừa nghe các phần chia sẻ của cộng đồng, vừa cảm nhận nhịp làm việc tại không gian AWS. Tài liệu sau sự kiện được lưu tại Drive để tôi xem lại khi hoàn thiện báo cáo thực tập.</p>
+<p>Ngày <strong>25/07/2026</strong> tôi đăng ký và được duyệt tham dự sự kiện tại văn phòng AWS (tầng 26). Buổi làm việc fulltime với khung điểm danh buổi sáng và chiều giúp tôi vừa nghe các phần chia sẻ bổ ích về trải nghiệm cá nhân của các anh chị, vừa cảm nhận nhịp làm việc tại không gian AWS. Tài liệu sau sự kiện được lưu tại Drive để tôi xem lại khi hoàn thiện báo cáo thực tập.</p>
 </div>

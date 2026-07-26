@@ -27,7 +27,7 @@ pre: " <b> 4. </b> "
 <h2>FCAJ x AABW</h2>
 <div class="event-meta-row"><span>When</span><b>08:30 – 17:00 (GMT+7) · Saturday, 25/07/2026</b></div>
 <div class="event-meta-row"><span>Where</span><b>AWS Office, 26th Floor, Ho Chi Minh City</b></div>
-<div class="event-meta-row"><span>Role</span><b>Attendee (Fulltime)</b></div>
+<div class="event-meta-row"><span>Role</span><b>Attendee</b></div>
 <span class="event-card-cta">Read the report →</span>
 </div>
 </a>

@@ -27,7 +27,7 @@ pre: " <b> 4. </b> "
 <h2>FCAJ x AABW</h2>
 <div class="event-meta-row"><span>Thời gian</span><b>08:30 – 17:00 (GMT+7) · Thứ Bảy, 25/07/2026</b></div>
 <div class="event-meta-row"><span>Địa điểm</span><b>Văn phòng AWS, tầng 26, TP. Hồ Chí Minh</b></div>
-<div class="event-meta-row"><span>Vai trò</span><b>Người tham dự (Fulltime)</b></div>
+<div class="event-meta-row"><span>Vai trò</span><b>Người tham dự</b></div>
 <span class="event-card-cta">Xem bài thu hoạch →</span>
 </div>
 </a>

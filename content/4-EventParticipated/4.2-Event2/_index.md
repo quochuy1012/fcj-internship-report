@@ -13,7 +13,7 @@ pre: " <b> 4.2. </b> "
 <div class="event-info-grid">
 <div><span>When</span><strong>Check-in 08:30 – 09:00 · Check-out 16:00 – 17:00 (GMT+7)<br>Saturday, 25/07/2026</strong></div>
 <div><span>Where</span><strong>AWS Office<br>26th Floor, Ho Chi Minh City</strong></div>
-<div><span>Role</span><strong>Attendee (Fulltime)</strong></div>
+<div><span>Role</span><strong>Attendee</strong></div>
 <div><span>Materials</span><strong><a href="https://drive.google.com/drive/folders/1goIcF8jRIGZczB4DBHGTsS6mp41FWmLL" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1goIcF8jRIGZczB4DBHGTsS6mp41FWmLL</a></strong></div>
 </div>
 
@@ -79,5 +79,5 @@ pre: " <b> 4.2. </b> "
 </ul>
 
 <h3>Personal experience</h3>
-<p>On <strong>25/07/2026</strong>, my registration to attend events at the AWS office (26th floor) was approved. The fulltime day with morning and afternoon attendance windows let me join the community sessions and experience the AWS workspace rhythm. Event materials were shared on Drive for review while I finalize the internship report.</p>
+<p>On <strong>25/07/2026</strong>, my registration to attend events at the AWS office (26th floor) was approved. The fulltime day with morning and afternoon attendance windows let me listen to useful personal experiences shared by seniors, and also feel the working rhythm at the AWS office. Event materials were shared on Drive for review while I finalize the internship report.</p>
 </div>
